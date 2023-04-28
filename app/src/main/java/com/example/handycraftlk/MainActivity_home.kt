@@ -6,25 +6,17 @@ import android.os.Bundle
 import android.view.View
 import com.example.handycraftlk.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity_home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_home)
     }
 
     fun buttonClick(v: View){
 
-        val intent = Intent(this, MainActivity_register::class.java)
+        val intent = Intent(this, itemView::class.java)
         startActivity(intent)
         finish()
     }
-
-    fun buttonLogin(v: View){
-
-        val intent = Intent(this, Home::class.java)
-        startActivity(intent)
-        finish()
-    }
-
 }

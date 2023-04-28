@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".CartFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2D6124"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#F8F0F0"
+                android:outlineProvider="bounds"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="141dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/back_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="265dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="15dp"
+                        android:outlineProvider="none"
+                        android:text="My Cart"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#090909">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="39dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_check_box_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="356dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:text="Mark all"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:text="Delete"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="99dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/_b4c845172c02f5e0ca1addee2809247" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="207dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:text="product name sample sample                                                                 Rs 580.00                                                         x10"
+                                android:textColor="#000000" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/button3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+                                        android:layout_marginTop="44dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="+"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/textView17"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_marginTop="53dp"
+                                        android:layout_weight="1"
+                                        android:text="10"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView82"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="46dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_check_box_24" />
+
+                                    <Button
+                                        android:id="@+id/button11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_weight="1"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="-"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="99dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView1125"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/__48" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="207dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView23334"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:text="product name sample sample                                                                 Rs 580.00                                                         x10"
+                                android:textColor="#000000" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/button34"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+                                        android:layout_marginTop="44dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="+"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/textView176"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_marginTop="53dp"
+                                        android:layout_weight="1"
+                                        android:text="10"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView88"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="46dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_check_box_24" />
+
+                                    <Button
+                                        android:id="@+id/button1112"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_weight="1"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="-"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="99dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView1112"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/handmade_handicraft_pouchpurse_1663558455_f3c35d03_progressive" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="207dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView231"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:text="product name sample sample                                                                 Rs 580.00                                                         x10"
+                                android:textColor="#000000" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/button31"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+                                        android:layout_marginTop="44dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="+"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/textView171"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_marginTop="53dp"
+                                        android:layout_weight="1"
+                                        android:text="10"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView81"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="46dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_check_box_24" />
+
+                                    <Button
+                                        android:id="@+id/button1111"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_weight="1"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="-"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="99dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView111"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ecofriendly_palmyra_shopping_reed_basket__hand_bag" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="207dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView233"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:text="product name sample sample                                                                 Rs 580.00                                                         x10"
+                                android:textColor="#000000" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/button33"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+                                        android:layout_marginTop="44dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="+"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/textView177"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_marginTop="53dp"
+                                        android:layout_weight="1"
+                                        android:text="10"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView89"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="46dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_check_box_24" />
+
+                                    <Button
+                                        android:id="@+id/button111"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38dp"
+
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_weight="1"
+                                        android:backgroundTint="@color/btnYellow"
+                                        android:padding="0dp"
+                                        android:paddingStart="11dp"
+                                        android:text="-"
+                                        android:textAlignment="viewStart"
+                                        android:textSize="20sp"
+                                        tools:ignore="TouchTargetSizeCheck" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="227dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Shipping fee  Rs. 250.00"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="Total Rs. 12500.00"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:backgroundTint="@color/btnYellow"
+                        android:text="Checkout" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
