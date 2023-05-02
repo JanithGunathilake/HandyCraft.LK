@@ -103,7 +103,7 @@ class AccountInformationUpdate : AppCompatActivity(){
                 }
             })
 
-            val intent = Intent(this, AccInfomation::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
 

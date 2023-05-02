@@ -49,6 +49,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#E4B51F"
+        android:onClick="buttonLogin"
         android:text="@string/Letsstart"
         app:circularflow_radiusInDP="50dp"
         app:cornerRadius="50dp"
