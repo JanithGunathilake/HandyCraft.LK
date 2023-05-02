@@ -106,6 +106,11 @@ class AccountInformationUpdate : AppCompatActivity(){
             val intent = Intent(this, AccInfomation::class.java)
             startActivity(intent)
         }
+
+        binding.btnBackEditAccount.setOnClickListener{
+            val intent = Intent(this, AccInfomation::class.java)
+            startActivity(intent)
+        }
     }
 
 }

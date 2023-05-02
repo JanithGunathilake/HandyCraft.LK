@@ -77,7 +77,10 @@ class AccInfomation : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        binding.btnBackAccInfo.setOnClickListener{
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
 
 
 

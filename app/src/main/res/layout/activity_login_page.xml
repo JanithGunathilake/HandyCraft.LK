@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginPage">
 
     <ImageView
         android:id="@+id/logo"
@@ -96,7 +96,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="42dp"
-        android:onClick="buttonClick"
         android:text="@string/createacc"
         android:textColor="@color/btnYellow"
         android:textSize="@dimen/font16"
