@@ -4,16 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#811B1B"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="425dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="378dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/z_p25_crafts_02" />
 
+    <TextView
+        android:id="@+id/textView6"
+
+        android:layout_width="320dp"
+        android:layout_height="308dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="10dp"
+        android:text="@string/desintro"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#E4B51F"
+        android:text="@string/Letsstart"
+        app:circularflow_radiusInDP="50dp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
