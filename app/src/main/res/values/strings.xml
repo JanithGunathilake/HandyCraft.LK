@@ -1,7 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
 
 
-    <string name="app_name" translatable="false">HandyCraft.LK</string>
+
+
+   
+
+<resources>
+
+ <string name="app_name" translatable="false">HandyCraft.LK</string>
     <string name="AdminDashboard" translatable="false">Admin Dashboard</string>
     <string name="Orders" translatable="false">" Orders:-"</string>
     <string name="Orders1" translatable="false">Orders:-</string>
@@ -49,4 +54,184 @@
     <string name="Active1" translatable="false">Active</string>
     tools:ignore="MissingTranslation"
 
+
+
+
+
+
+
+
+
+
+    <string name="app_name">HandyCraft.LK</string>
+
+    <string name="SellerCenter">Seller Center</string>
+    <string name="sellername">denuwanODTravel(PVT)Ltd</string>
+    <string name="TotalSales">Total Sales</string>
+    <string name="TotalSalesCount">1000+</string>
+    <string name="TotalOrders">Total Orders</string>
+    <string name="PendingOrderCount">2</string>
+    <string name="ApprovedOrderCount">5</string>
+    <string name="Approved">Approved</string>
+    <string name="Pending">Pending</string>
+    <string name="Returned">Returned</string>
+    <string name="returnCount">10</string>
+    <string name="addProduct">Add product</string>
+    <string name="productName">Product Name  *</string>
+    <string name="Lamp">Lamp made from coconut shells</string>
+    <string name="category">Category  *</string>
+    <string name="Set">Set</string>
+    <string name="description">Description  *</string>
+    <string name="desc_info">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="price">Price  *</string>
+    <string name="priceValue">Rs 5000.00</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Category">Category</string>
+    <string name="input">Input Search Keywords</string>
+    <string name="WoodCraving">Wood Craving</string>
+    <string name="LacquerProducts">Lacquer Products</string>
+    <string name="Handloom">Handloom</string>
+    <string name="CoconutProducts">Coconut Products</string>
+    <string name="Me">Me</string>
+    <string name="SellerID">Seller ID:</string>
+    <string name="S123456789">S123456789</string>
+    <string name="ShopName">Shop Name:</string>
+    <string name="SellerAccount">Seller Account</string>
+    <string name="Products">Products</string>
+    <string name="Notifications">Notifications</string>
+    <string name="About">About</string>
+    <string name="LogOut">Log Out</string>
+    <string name="LoginEmailAddress">Login Email Address</string>
+    <string name="email">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="phone">071-XXXXXXX</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="AddedProducts">Added Products</string>
+    <string name="Update">Update</string>
+    <string name="Delete">Delete</string>
+
+
+    <string name="yaka">yaka</string>
+    <string name="handycraft">HandyCraft.LK</string>
+    <string name="yakaa">yakaa</string>
+    <string name="h">H</string>
+    <string name="todo">TODO</string>
+    <string name="welcome">Welcome Back</string>
+    <string name="signto">Sign to Continue</string>
+    <string name="edtemil">Enter Your Email</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="btnlogin">Login</string>
+    <string name="tv_donthave">Don\'t have account?</string>
+    <string name="createacc">create a new account</string>
+    <string name="password">Enter Your Password</string>
+    <string name="createAccout">Create Account</string>
+    <string name="tv_createnew">Create a new account</string>
+    <string name="name">Enter Your Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="namee">Name</string>
+    <string name="pwd">Password</string>
+    <string name="reEnterPwd">Confirm Password</string>
+    <string name="btncreateacc">Create Account</string>
+    <string name="tv_already">"Already have a account? "</string>
+    <string name="loginn">Login</string>
+    <string name="back">back</string>
+    <string name="search">Search...</string>
+    <string name="searc">Search</string>
+    <string name="yellowback">Yellow</string>
+    <string name="iv_white">white</string>
+    <string name="icon">icon</string>
+    <string name="item1">Ship made of Coconut shell</string>
+    <string name="item1Price">Rs. 1500</string>
+    <string name="item4">item4</string>
+    <string name="item1back">item1back</string>
+    <string name="item1img">item1img</string>
+    <string name="item2img">item2img</string>
+    <string name="item3img">item3img</string>
+    <string name="coconutshell">Coconut shell Tea Set</string>
+    <string name="rs2500">Rs. 2500</string>
+    <string name="btnAddToCart">Add to cart</string>
+    <string name="item_2">Ecofriendly Palmyra shopping Reed basket</string>
+    <string name="item_3">Traditional masks of Srianka</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="itembox">itembox</string>
+    <string name="elep">Sri Lankan Handmade Wooden Elephant</string>
+    <string name="Dream_Catcher">Handmade Dream Catcher</string>
+    <string name="HandicraftPouchPurse">Handmade Handicraft Pouch/Purse</string>
+    <string name="cart">CART</string>
+    <string name="welcomee">Welcome...</string>
+    <string name="num1">1</string>
+    <string name="checkout">Checkout</string>
+    <string name="num3">3</string>
+    <string name="svUserAccount">UserAccount</string>
+    <string name="myaccount">My Account</string>
+    <string name="cart_">My Cart</string>
+    <string name="username">Janith K. Gunathilake</string>
+    <string name="uname">\@janikavi2344</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="edit">Edit</string>
+    <string name="userinfo">User Info</string>
+    <string name="userAcc">Account Infomation</string>
+    <string name="purchase">Purchase History</string>
+    <string name="message">Message</string>
+    <string name="returnreq">Return Request</string>
+    <string name="item">Item</string>
+    <string name="logout">LOGOUT</string>
+    <string name="emailadd">janikavi119@gmail.com</string>
+    <string name="number">074 2345678</string>
+    <string name="cusid">Cus ID</string>
+    <string name="cusiid">CUS_00023</string>
+    <string name="mobile">Mobile</string>
+    <string name="passwordt">Password</string>
+    <string name="pw">******************</string>
+    <string name="tvSwitch">Register as :- </string>
+    <string name="buyer">Buyer</string>
+    <string name="seller">Seller</string>
+    <string name="cont">Continue</string>
+    <string name="address">Address</string>
+    <string name="about">About Us</string>
+    <string name="role">Role</string>
+    <string name="done">Done</string>
+    <string name="delete">Delete</string>
+
+
+    <string-array name="role">
+        <item>Select</item>
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+
+    <string name="place">Place Order</string>
+    <string name="total">Total</string>
+    <string name="totalcal">Rs. 1250.00</string>
+    <string name="tship">Total Shipping</string>
+    <string name="visa">Visa 4216*****2255</string>
+    <string name="addresscus">W.G.N.Kamal                                                               Dissanayake Address sample 56/9 address sample Dissanayake Address sample 56/9 address sample</string>
+    <string name="Pendingseller">Pending</string>
+    <string name="Processing">Processing</string>
+    <string name="InDelivery">In Delivery</string>
+    <string name="Complete">Complete</string>
+    <string name="referencenumber">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
+    <string name="refnumber">"  Order 21312798892            placed on 18 Feb 2023 01:19:24"</string>
+    <string name="prnumber">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="cancelorder">Cancel</string>
+    <string name="checkoutproductname">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="completepr">product name sample sample                                                                 Rs 580.00                                                         x10</string>
+    <string name="Markall">Mark all</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">updateordersseller</string>
+    <string name="Updateordersseller">Update</string>
+    <string name="Approveorders">Approved</string>
+    <string name="Letsstart">Lets Start</string>
+    <string name="aboutdes"><![CDATA["Our goal in creating this &quot;HandyCraft.LK&quot; mobile application is to offer high-quality goods to clients. Self - employed individuals will be able to grow their small enterprises globally thanks to this application. Due to its success on the international market, it will indirectly aid the current economic crisis by bringing funds into the country. "]]></string>
+    <string name="desintro">interested in making crafts? having trouble selling your products?                                        or else having any plans to purchase  any handcrafted goods?                                           The best solution is handycraft.lk.                              Join with us</string>
+    <string name="producapp">interested in making crafts? having trouble selling your products?                                        or else having any plans to purchase  any handcrafted goods?                                           The best solution is handycraft.lk.                              Join with us</string>
+    <string name="processproduct">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="ordersrefrocess">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
+    <string name="a">abc</string>
+    <string name="cvv">764</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    
 </resources>
