@@ -17,7 +17,7 @@
             android:layout_width="636dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/yellow"
+            android:background="@color/Yellow"
             android:orientation="horizontal">
 
             <TextView
@@ -90,7 +90,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@color/yellow"
+            android:background="@color/Yellow"
             android:orientation="vertical">
 
             <TextView

@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/yellow"
+                android:background="@color/Yellow"
                 android:text="@string/productName"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:background="@color/yellow"
+                    android:background="@color/Yellow"
                     android:text="@string/category"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/yellow"
+                android:background="@color/Yellow"
                 android:text="@string/description"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
@@ -166,7 +166,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/yellow"
+                android:background="@color/Yellow"
                 android:text="@string/price"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/yellow"
+                android:backgroundTint="@color/Yellow"
                 android:text="Update"
                 app:cornerRadius="50dp" />
         </LinearLayout>
@@ -201,7 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="79dp"
             android:layout_marginTop="10dp"
-            android:background="@color/yellow">
+            android:background="@color/Yellow">
 
             <ImageView
                 android:id="@+id/imageView34"

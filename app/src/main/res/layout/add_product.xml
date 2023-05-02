@@ -220,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/green"
+                        android:backgroundTint="@color/Green"
                         android:text="@string/Confirm"
                         android:textAlignment="center"
                         tools:cornerRadius="50dp" />
