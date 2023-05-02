@@ -1,4 +1,68 @@
+
+
+
+
+   
+
 <resources>
+
+ <string name="app_name" translatable="false">HandyCraft.LK</string>
+    <string name="AdminDashboard" translatable="false">Admin Dashboard</string>
+    <string name="Orders" translatable="false">" Orders:-"</string>
+    <string name="Orders1" translatable="false">Orders:-</string>
+    <string name="Users" translatable="false">Users :-</string>
+    <string name="Products" translatable="false">Products :-</string>
+    <string name="Categories" translatable="false">Categories :-</string>
+    <string name="WeeklySales" translatable="false">Weekly Sales</string>
+    <string name="Categories1" translatable="false">Categories</string>
+    <string name="AddNewCategory" translatable="false">Add New Category</string>
+    <string name="WoodCraving" translatable="false">Wood Craving</string>
+    <string name="LacquerProducts" translatable="false">Lacquer Products</string>
+    <string name="Handloom" translatable="false">Handloom</string>
+    <string name="CoconutProducts" translatable="false">Coconut Products</string>
+    <string name="Productlist" translatable="false">Product list</string>
+    <string name="Product1" translatable="false">Product 1</string>
+    <string name="Category" translatable="false">Category:</string>
+    <string name="Description" translatable="false">Description:</string>
+    <string name="Price" translatable="false">Price:</string>
+    <string name="Product2" translatable="false">Product 2</string>
+    <string name="ClearHistory" translatable="false">Clear History</string>
+    <string name="Me" translatable="false">Me</string>
+    <string name="Name" translatable="false">Name:</string>
+    <string name="LoginEmailAddress" translatable="false">Login Email Address:</string>
+    <string name="PhoneNumber" translatable="false">Phone Number:</string>
+    <string name="ChangePassword" translatable="false">Change Password:</string>
+    <string name="LogOut" translatable="false">Log Out</string>
+    <string name="Users1" translatable="false">Users</string>
+    <string name="Customers" translatable="false">Customers</string>
+    <string name="Sellers" translatable="false">Sellers</string>
+    <string name="user1" translatable="false">User 1</string>
+    <string name="user2" translatable="false">User 2</string>
+    <string name="user3" translatable="false">User 3</string>
+    <string name="user4" translatable="false">User 4</string>
+    <string name="UserProfile" translatable="false">User Profile</string>
+    <string name="UserID" translatable="false">User ID:</string>
+    <string name="UserName" translatable="false">User Name:</string>
+    <string name="Email" translatable="false">Email:</string>
+    <string name="Mobile" translatable="false">Mobile:</string>
+    <string name="Status" translatable="false">Status:</string>
+    <string name="Tools" translatable="false">Tools</string>
+    <string name="ManageUsers" translatable="false">Manage Users</string>
+    <string name="ManageCategory" translatable="false">Manage Category</string>
+    <string name="delete" translatable="false">Delete</string>
+    <string name="InputSearchKeyword" translatable="false">Input Search Keyword</string>
+    <string name="Active1" translatable="false">Active</string>
+    tools:ignore="MissingTranslation"
+
+
+
+
+
+
+
+
+
+
     <string name="app_name">HandyCraft.LK</string>
 
     <string name="SellerCenter">Seller Center</string>
@@ -169,9 +233,5 @@
     <string name="a">abc</string>
     <string name="cvv">764</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
-
-
+    
 </resources>
