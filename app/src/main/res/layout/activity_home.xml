@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.example.handycraftlk.HomeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="682dp"
+            tools:layout="@layout/fragment_home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginBottom="7dp"
+            android:contentDescription="@string/h"
+            app:srcCompat="@drawable/selected_home"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/icnOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginBottom="7dp"
+            android:contentDescription="@string/forgot"
+            app:srcCompat="@drawable/unselected_order" />
+
+        <ImageView
+            android:id="@+id/icnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="7dp"
+            android:contentDescription="@string/yaka"
+            app:srcCompat="@drawable/unselected_cart" />
+
+        <ImageView
+            android:id="@+id/icnUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="7dp"
+            android:contentDescription="@string/Dream_Catcher"
+            app:srcCompat="@drawable/unselected_user" />
+    </LinearLayout>
+
+</LinearLayout>

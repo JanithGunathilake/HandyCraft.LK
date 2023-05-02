@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "693411513355",
+    "firebase_url": "https://handycraftlk-default-rtdb.firebaseio.com",
+    "project_id": "handycraftlk",
+    "storage_bucket": "handycraftlk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693411513355:android:edba941b0aac30287ef30e",
+        "android_client_info": {
+          "package_name": "com.example.handycraftlk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693411513355-15egl3le6083be2artgk2jfc171l3v47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp1PQtaUeYY78Y2wLePnvYmkEptYcmNOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693411513355-15egl3le6083be2artgk2jfc171l3v47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
