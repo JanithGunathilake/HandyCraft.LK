@@ -3,10 +3,9 @@ package com.example.handycraftlk
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class test : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-       getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_test)
     }
 }
