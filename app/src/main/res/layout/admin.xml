@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Yellow"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/admindashboard"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:paddingTop="@dimen/top_padding"
+            android:text="@string/AdminDashboard"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="119dp">
+
+        <LinearLayout
+            android:id="@+id/box2"
+            android:layout_width="191dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/Grey"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Orders"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:paddingLeft="5dp"
+                android:text="@string/Orders1"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:fontFamily="sans-serif-black"
+                android:text="50/per day"
+                android:textAlignment="center"
+                android:textColor="#E4B51F"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box1"
+            android:layout_width="179dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:background="#ECECEC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Users"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:paddingLeft="5dp"
+                android:text="@string/Users"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="sans-serif-black"
+                android:text="12000"
+                android:textAlignment="center"
+                android:textColor="#E4B51F"
+                android:textSize="34sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp">
+
+        <LinearLayout
+            android:id="@+id/box3"
+            android:layout_width="191dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#ECECEC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Products"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="5dp"
+                android:text="@string/Products"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="sans-serif-black"
+                android:text="400"
+                android:textAlignment="center"
+                android:textColor="#E4B51F"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#ECECEC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Categories"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:paddingLeft="5dp"
+                android:text="@string/Categories"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:fontFamily="sans-serif-black"
+                android:text="20 currently"
+                android:textAlignment="center"
+                android:textColor="#E4B51F"
+                android:textSize="34sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/weeklySales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:text="@string/WeeklySales"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/weekly_sales" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/Yellow">
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/imageView35"
+            android:layout_width="46dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_format_list_bulleted_24" />
+
+        <ImageView
+            android:id="@+id/imageView37"
+            android:layout_width="48dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/list" />
+
+        <ImageView
+            android:id="@+id/imageView38"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_person_24" />
+    </LinearLayout>
+
+</LinearLayout>
