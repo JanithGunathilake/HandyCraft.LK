@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">HandyCraft.LK</string>
+    <string name="place">Place Order</string>
+    <string name="total">Total</string>
+    <string name="totalcal">Rs. 1250.00</string>
+    <string name="tship">Total Shipping</string>
+    <string name="visa">Visa 4216*****2255</string>
+    <string name="addresscus">W.G.N.Kamal                                                               Dissanayake Address sample 56/9 address sample Dissanayake Address sample 56/9 address sample</string>
+    <string name="Pendingseller">Pending</string>
+    <string name="Processing">Processing</string>
+    <string name="InDelivery">In Delivery</string>
+    <string name="Complete">Complete</string>
+    <string name="referencenumber">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
+    <string name="refnumber">"  Order 21312798892            placed on 18 Feb 2023 01:19:24"</string>
+    <string name="prnumber">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="cancelorder">Cancel</string>
+    <string name="checkoutproductname">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="completepr">product name sample sample                                                                 Rs 580.00                                                         x10</string>
+    <string name="Markall">Mark all</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">updateordersseller</string>
+    <string name="Updateordersseller">Update</string>
+    <string name="Approveorders">Approved</string>
+    <string name="Letsstart">Lets Start</string>
+    <string name="aboutdes"><![CDATA["Our goal in creating this &quot;HandyCraft.LK&quot; mobile application is to offer high-quality goods to clients. Self - employed individuals will be able to grow their small enterprises globally thanks to this application. Due to its success on the international market, it will indirectly aid the current economic crisis by bringing funds into the country. "]]></string>
+    <string name="desintro">interested in making crafts? having trouble selling your products?                                        or else having any plans to purchase  any handcrafted goods?                                           The best solution is handycraft.lk.                              Join with us</string>
+    <string name="producapp">interested in making crafts? having trouble selling your products?                                        or else having any plans to purchase  any handcrafted goods?                                           The best solution is handycraft.lk.                              Join with us</string>
+    <string name="processproduct">product name sample sample                                             Rs 580.00                                                         x1</string>
+    <string name="ordersrefrocess">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
+    <string name="a">abc</string>
+    <string name="cvv">764</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <dimen name="widthtotal">180dp</dimen>-->
+<!--    <dimen name="addresslayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="visalayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="visalayoutheight">match_parent</dimen>-->
+<!--    <dimen name="addresslayoutheight">match_parent</dimen>-->
+<!--    <dimen name="productwidth">match_parent</dimen>-->
+<!--    <dimen name="productheight">match_parent</dimen>-->
+<!--    <dimen name="intropage">interested in making crafts? having trouble selling your products? or-->
+<!--        else having any plans to purchase any handcrafted goods? The best solution is handycraft.lk.-->
+<!--        Join with us-->
+<!--    </dimen>-->
+<!--    <dimen name="introwidth">match_parent</dimen>-->
+<!--    <dimen name="introheight">match_parent</dimen>-->
+<!--    <dimen name="heightdesbout">327dp</dimen>-->
+    <dimen name="heoghtdes">411dp</dimen>
+    <dimen name="abodutdesheoght">327dp</dimen>
+<!--    <dimen name="wrap_contentapprove">wrap_content</dimen>-->
+<!--    <dimen name="pendingwidth">wrap_content</dimen>-->
+<!--    <dimen name="indeliverywidthcus">wrap_content</dimen>-->
+<!--    <dimen name="completeorders">wrap_content</dimen>-->
+<!--    <dimen name="widftshtotal">180dp</dimen>-->
+<!--    <dimen name="addrefsslayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="visalqayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="visaladqyoutheight">match_parent</dimen>-->
+<!--    <dimen name="addreqsslayoutheight">match_parent</dimen>-->
+<!--    <dimen name="producqtwidth">match_parent</dimen>-->
+<!--    <dimen name="produqctheight">match_parent</dimen>-->
+<!--    <dimen name="sellerwidthtotal">180dp</dimen>-->
+<!--    <dimen name="selleaddresslayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="vselleisalayoutwidth">wrap_content</dimen>-->
+<!--    <dimen name="vselleisalayoutheight">match_parent</dimen>-->
+<!--    <dimen name="adselledresslayoutheight">match_parent</dimen>-->
+<!--    <dimen name="prselleoductwidth">match_parent</dimen>-->
+<!--    <dimen name="proselleductheight">match_parent</dimen>-->
+</resources>
