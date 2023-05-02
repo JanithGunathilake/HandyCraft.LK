@@ -1,6 +1,53 @@
 <resources>
     <string name="app_name">HandyCraft.LK</string>
 
+    <string name="SellerCenter">Seller Center</string>
+    <string name="sellername">denuwanODTravel(PVT)Ltd</string>
+    <string name="TotalSales">Total Sales</string>
+    <string name="TotalSalesCount">1000+</string>
+    <string name="TotalOrders">Total Orders</string>
+    <string name="PendingOrderCount">2</string>
+    <string name="ApprovedOrderCount">5</string>
+    <string name="Approved">Approved</string>
+    <string name="Pending">Pending</string>
+    <string name="Returned">Returned</string>
+    <string name="returnCount">10</string>
+    <string name="addProduct">Add product</string>
+    <string name="productName">Product Name  *</string>
+    <string name="Lamp">Lamp made from coconut shells</string>
+    <string name="category">Category  *</string>
+    <string name="Set">Set</string>
+    <string name="description">Description  *</string>
+    <string name="desc_info">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="price">Price  *</string>
+    <string name="priceValue">Rs 5000.00</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Category">Category</string>
+    <string name="input">Input Search Keywords</string>
+    <string name="WoodCraving">Wood Craving</string>
+    <string name="LacquerProducts">Lacquer Products</string>
+    <string name="Handloom">Handloom</string>
+    <string name="CoconutProducts">Coconut Products</string>
+    <string name="Me">Me</string>
+    <string name="SellerID">Seller ID:</string>
+    <string name="S123456789">S123456789</string>
+    <string name="ShopName">Shop Name:</string>
+    <string name="SellerAccount">Seller Account</string>
+    <string name="Products">Products</string>
+    <string name="Notifications">Notifications</string>
+    <string name="About">About</string>
+    <string name="LogOut">Log Out</string>
+    <string name="LoginEmailAddress">Login Email Address</string>
+    <string name="email">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="phone">071-XXXXXXX</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="AddedProducts">Added Products</string>
+    <string name="Update">Update</string>
+    <string name="Delete">Delete</string>
+
+
     <string name="yaka">yaka</string>
     <string name="handycraft">HandyCraft.LK</string>
     <string name="yakaa">yakaa</string>
@@ -123,6 +170,7 @@
     <string name="cvv">764</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 
 
