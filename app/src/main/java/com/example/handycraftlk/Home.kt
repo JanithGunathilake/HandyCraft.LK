@@ -1,5 +1,7 @@
 package com.example.handycraftlk
 
+import SessionManager
+import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +9,22 @@ import android.widget.ImageView
 import com.example.handycraftlk.R
 
 class Home : AppCompatActivity() {
+
+    private lateinit var sessionManager: SessionManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+
+        sessionManager = SessionManager(this)
+
+        if (!sessionManager.isLoggedIn()) {
+            val intent = Intent(this, LoginPage::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val imgHome: ImageView = findViewById(R.id.icnHome)
         val imgOrder: ImageView = findViewById(R.id.icnOrder)

@@ -74,5 +74,22 @@
     <string name="mobile">Mobile</string>
     <string name="passwordt">Password</string>
     <string name="pw">******************</string>
-    <string name="tvSwitch">Register as a Seller</string>
+    <string name="tvSwitch">Register as :- </string>
+    <string name="buyer">Buyer</string>
+    <string name="seller">Seller</string>
+    <string name="cont">Continue</string>
+    <string name="address">Address</string>
+    <string name="about">About Us</string>
+    <string name="role">Role</string>
+    <string name="done">Done</string>
+    <string name="delete">Delete</string>
+
+
+    <string-array name="role">
+        <item>Select</item>
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+
+
 </resources>

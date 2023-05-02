@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btnBack"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="14dp"
@@ -39,6 +39,7 @@
         android:layout_marginTop="9dp"
         android:layout_marginEnd="109dp"
         android:text="@string/tv_createnew"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +108,7 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#757575"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPhone"
@@ -119,29 +121,30 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="56dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/reEnterPwd"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#757575"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPwd"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPwd" />
 
     <Button
         android:id="@+id/btnCreateAcc"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
         android:backgroundTint="@color/btnYellow"
         android:text="@string/btncreateacc"
         app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <TextView
@@ -162,7 +165,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginEnd="78dp"
         android:fontFamily="sans-serif-black"
-        android:onClick="buttonClick"
+        android:onClick="buttonLogin"
         android:text="@string/loginn"
         android:textColor="@color/btnYellow"
         android:textSize="16sp"
@@ -170,15 +173,30 @@
         app:layout_constraintTop_toBottomOf="@+id/btnCreateAcc"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="56dp"
-        android:minHeight="48dp"
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tvSwitch"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtRePwd" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="56dp"
+        android:entries="@array/role"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRePwd"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
