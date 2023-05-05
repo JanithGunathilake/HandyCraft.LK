@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="124dp"
     tools:context=".Spending">
 
     <LinearLayout
@@ -12,90 +12,109 @@
         android:orientation="vertical">
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginBottom="7dp"
-            android:backgroundTint="#FFFFFF"
-            android:orientation="vertical">
+            android:layout_height="30dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="179dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FDFDFD"
+                android:text=" 18 Feb 2023 01:19:24"
+                android:textColor="#000000" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/orderId"
                 android:layout_width="match_parent"
-                android:layout_height="124dp"
-                android:orientation="vertical">
+                android:layout_height="30dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FDFDFD"
+                android:text="  Order 21312798892"
+                android:textColor="#000000" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:background="#FFFFFF"
-                        android:backgroundTint="#FDFDFD"
-                        android:text="  Order 21312798892              placed on 18 Feb 2023 01:19:24"
-                        android:textColor="#000000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-                </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="99dp"
+                android:layout_height="match_parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="99dp"
-                        android:layout_height="match_parent">
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="190dp"
-                        android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             android:id="@+id/pname"
-                            android:layout_width="190dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:padding="8dp"
-                            android:text="product name sample sample                                             Rs 580.00                                                         x1"
+                            android:text="product name"
                             android:textColor="#000000" />
-                    </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
-                        ..<Button
-                        android:id="@+id/button8"
-                        android:layout_width="94dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="44dp"
-                        android:backgroundTint="#DD3B3B"
-                        android:text="Cancel"
-                        android:textAlignment="viewStart"
-                        android:textSize="12sp"
-                        />
+                        <TextView
+                            android:id="@+id/pquantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="10"
+                            android:textColor="#000000" />
 
-                        <Button
+                    </LinearLayout>
 
-                            android:id="@+id/button9"
-
-                            android:layout_width="94dp"
-                            android:layout_height="48dp"
-                            android:backgroundTint="#DF0E9C13"
-                            android:text="Approve"
-                            android:textAlignment="viewStart"
-                            android:textSize="12sp" />
-                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
-            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <Button
+
+                    android:id="@+id/approve"
+
+                    android:layout_width="84dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#DF0E9C13"
+                    android:text="More"
+                    android:textAlignment="viewStart"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+
+</LinearLayout>
