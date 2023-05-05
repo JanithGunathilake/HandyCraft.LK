@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="124dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -36,10 +36,20 @@
                 <TextView
                     android:id="@+id/tvProductName"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="product name sample sample                                                                 Rs 580.00                                                         x10"
-                    android:textColor="#000000" />
+                    android:text="product name sample sample"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="90dp"
+                    android:text="TextView"
+                    android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
 
@@ -50,75 +60,38 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <Button
-                            android:id="@+id/button3"
-                            android:layout_width="match_parent"
-                            android:layout_height="38dp"
-                            android:layout_marginTop="44dp"
-                            android:layout_marginEnd="4dp"
-                            android:backgroundTint="@color/btnYellow"
-                            android:padding="0dp"
-                            android:paddingStart="11dp"
-                            android:text="+"
-                            android:textAlignment="viewStart"
-                            android:textSize="20sp"
-                            tools:ignore="TouchTargetSizeCheck" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/tvCreateAcc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="6dp"
-                            android:layout_marginTop="53dp"
-                            android:layout_weight="1"
-                            android:text="10"
-                            android:textColor="#000000"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-
-                        <ImageView
-                            android:id="@+id/imageView82"
-                            android:layout_width="wrap_content"
-                            android:layout_height="46dp"
-                            android:layout_weight="1"
-                            app:srcCompat="@drawable/ic_baseline_check_box_24" />
-
-                        <Button
-                            android:id="@+id/button11"
+                        <TextView
+                            android:id="@+id/textView"
                             android:layout_width="match_parent"
-                            android:layout_height="38dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:text="Quantity"
+                            android:textAlignment="center"
+                            android:textSize="22sp" />
+                    </LinearLayout>
 
-                            android:layout_marginEnd="4dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/btnYellow"
-                            android:padding="0dp"
-                            android:paddingStart="11dp"
-                            android:text="-"
-                            android:textAlignment="viewStart"
-                            android:textSize="20sp"
-                            tools:ignore="TouchTargetSizeCheck" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
+                        <EditText
+                            android:id="@+id/editTextTextPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp" />
                     </LinearLayout>
                 </LinearLayout>
 

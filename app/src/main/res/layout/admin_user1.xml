@@ -119,7 +119,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/btnBackView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

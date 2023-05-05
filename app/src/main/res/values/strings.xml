@@ -1,12 +1,6 @@
-
-
-
-
-   
-
 <resources>
 
- <string name="app_name" translatable="false">HandyCraft.LK</string>
+    <string name="app_name" translatable="false">HandyCraft.LK</string>
     <string name="AdminDashboard" translatable="false">Admin Dashboard</string>
     <string name="Orders" translatable="false">" Orders:-"</string>
     <string name="Orders1" translatable="false">Orders:-</string>
@@ -48,17 +42,6 @@
     <string name="Active1" translatable="false">Active</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
     <string name="SellerCenter" translatable="false">Seller Center</string>
     <string name="sellername" translatable="false">denuwanODTravel(PVT)Ltd</string>
     <string name="TotalSales" translatable="false">Total Sales</string>
@@ -94,7 +77,7 @@
     <string name="LoginEmailAddress" translatable="false">Login Email Address</string>
     <string name="email" translatable="false">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
     <string name="PhoneNumber" translatable="false">Phone Number</string>
-    <string name="phone" translatable="false">071-XXXXXXX</string>
+    <string name="phone" translatable="false">071XXXXXXX</string>
     <string name="ChangePassword" translatable="false">Change Password</string>
     <string name="AddedProducts" translatable="false">Added Products</string>
     <string name="Update" translatable="false">Update</string>
@@ -217,6 +200,10 @@
     <string name="ordersrefrocess" translatable="false">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
     <string name="a" translatable="false">abc</string>
     <string name="cvv" translatable="false">764</string>
+    <string name="jkemail" translatable="false">your_mail@gmail.com</string>
+    <string name="emailProfile" translatable="false">Email</string>
+    <string name="emailllll" translatable="false">Email</string>
+    <string name="phoneee" translatable="false">Mobile Number</string>
     <!-- TODO: Remove or change this placeholder text -->
-    
+
 </resources>

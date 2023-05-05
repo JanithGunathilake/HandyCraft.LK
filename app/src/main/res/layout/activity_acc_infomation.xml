@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/email"
+                android:text="@string/emailProfile"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -183,7 +183,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/btnBackTool"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
@@ -250,7 +250,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tvNameSeller"
             android:layout_width="211dp"
             android:layout_height="40dp"
             android:layout_marginStart="100dp"

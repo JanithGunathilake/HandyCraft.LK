@@ -112,6 +112,7 @@
         android:layout_marginTop="49dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:autofillHints=""
         android:hint="@string/edtemil"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -129,13 +130,14 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:autofillHints=""
         android:hint="@string/password"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailLog"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailLog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
