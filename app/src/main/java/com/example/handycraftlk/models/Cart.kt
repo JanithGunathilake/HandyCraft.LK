@@ -5,5 +5,5 @@ data class Cart(
     val proPrice : String? = null,
     val proName : String? = null,
     val buyerEmail: String? = null,
-    val sellerEmail: String? = null
+    val sellerEmail: String? = null    //commeent
 )
