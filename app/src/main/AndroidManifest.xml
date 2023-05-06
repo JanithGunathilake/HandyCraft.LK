@@ -119,7 +119,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SellerOrdersFragmentMain"
+            android:name=".COrdersFragmentMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
