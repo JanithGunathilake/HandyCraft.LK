@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.handycraftlk.databinding.ActivityAccInfomationBinding
 import com.google.firebase.database.*
 
-class AccInfomation : AppCompatActivity() {
+class AccInfomation : AppCompatActivity() {//comment
 //hh
     private lateinit var binding: ActivityAccInfomationBinding
     private lateinit var database: DatabaseReference
