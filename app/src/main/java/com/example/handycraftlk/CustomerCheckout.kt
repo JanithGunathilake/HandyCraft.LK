@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handycraftlk.adaptors.MyAdapter
 import com.example.handycraftlk.databinding.CheckoutCustomerBinding
+import com.example.handycraftlk.models.Order
 import com.google.firebase.database.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -40,19 +42,21 @@ class CustomerCheckout : AppCompatActivity() {
             val quantity="10";
             val totalAmount="250";
             val itemName="oooooo";
-            val custId="123";
-            val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+            val email="123@gmail.com";
+            val status="Pending"
 
+            val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
             val dt=LocalDateTime.now().format(formatter).toString()
+            val sellerId="456"
             val orderId=database.push().key!!
 
             database= FirebaseDatabase.getInstance().getReference("Order")
-            val Order=Order(address,visaCard,cvv, quantity,itemName,totalAmount,custId,orderId,dt)
+            val Order=Order(address,visaCard,cvv, quantity,itemName,totalAmount,email,orderId,dt,status,sellerId)
             database.child(orderId).setValue(Order).addOnSuccessListener {
                 binding.visaCard.text.clear()
                 binding.cvv.text.clear()
                 binding.cusAddress.text.clear()
-                Toast.makeText(this,"sucess",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"sucess message adddedd",Toast.LENGTH_SHORT).show()
             }.addOnFailureListener{
                 Toast.makeText(this,"Fail",Toast.LENGTH_SHORT).show()
             }
@@ -73,7 +77,7 @@ class CustomerCheckout : AppCompatActivity() {
                         val item=itemSnapShot.getValue(Order::class.java)
                         itemArrayList.add(item!!)
                     }
-                    itemRecyclerView.adapter=MyAdapter(itemArrayList)
+                    itemRecyclerView.adapter= MyAdapter(itemArrayList)
                 }
             }
 
