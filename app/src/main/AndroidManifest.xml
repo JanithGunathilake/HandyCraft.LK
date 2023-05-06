@@ -13,6 +13,13 @@
         android:theme="@style/Theme.HandyCraftLK"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUsPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CategoryUpdateView"
             android:exported="false">
             <meta-data
@@ -54,7 +61,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AddCategory"
             android:exported="false">
@@ -149,7 +155,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity_home"
             android:exported="false">

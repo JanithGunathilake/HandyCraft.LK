@@ -9,11 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="124dp"
+        android:background="@color/background"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/white"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
@@ -76,7 +79,7 @@
                             android:layout_margin="10dp"
                             android:text="Quantity"
                             android:textAlignment="center"
-                            android:textSize="22sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout

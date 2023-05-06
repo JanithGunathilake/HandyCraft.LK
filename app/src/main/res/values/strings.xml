@@ -204,6 +204,7 @@
     <string name="emailProfile" translatable="false">Email</string>
     <string name="emailllll" translatable="false">Email</string>
     <string name="phoneee" translatable="false">Mobile Number</string>
+    <string name="next" translatable="false">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
