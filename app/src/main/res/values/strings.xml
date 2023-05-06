@@ -1,12 +1,6 @@
-
-
-
-
-   
-
 <resources>
 
- <string name="app_name" translatable="false">HandyCraft.LK</string>
+    <string name="app_name" translatable="false">HandyCraft.LK</string>
     <string name="AdminDashboard" translatable="false">Admin Dashboard</string>
     <string name="Orders" translatable="false">" Orders:-"</string>
     <string name="Orders1" translatable="false">Orders:-</string>
@@ -46,17 +40,6 @@
     <string name="ManageCategory" translatable="false">Manage Category</string>
     <string name="InputSearchKeyword" translatable="false">Input Search Keyword</string>
     <string name="Active1" translatable="false">Active</string>
-
-
-
-
-
-
-
-
-
-
-
 
 
     <string name="SellerCenter" translatable="false">Seller Center</string>
@@ -218,5 +201,7 @@
     <string name="a" translatable="false">abc</string>
     <string name="cvv" translatable="false">764</string>
     <!-- TODO: Remove or change this placeholder text -->
-    
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 </resources>
