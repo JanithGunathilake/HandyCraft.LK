@@ -68,7 +68,8 @@ class SellerPendingOrderHistory : Fragment() {
 
                 adapter.setOnItemClickListner(object :SPendingOrderAdapter.onItemClickListner{
                     override fun onItemClick(position: Int) {
-                       val intent= Intent(this@SellerPendingOrderHistory.context,orderDetailsPop::class.java)
+                        val intent = Intent(requireContext(), orderDetailsPop::class.java)
+
                         intent.putExtra("orderId",orderArrayList[position].orderId)
                         intent.putExtra("quantityView",orderArrayList[position].quantity)
                         intent.putExtra("addressView",orderArrayList[position].address)

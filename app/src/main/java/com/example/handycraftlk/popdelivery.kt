@@ -16,7 +16,7 @@ class popdelivery : AppCompatActivity() {
     private lateinit var addressView: TextView
     private lateinit var productView: TextView
     private lateinit var deleteBtn: Button
-    private lateinit var update: Button
+    private lateinit var inupdate: Button
 
     // private lateinit var quantity : TextView
 
@@ -27,9 +27,9 @@ class popdelivery : AppCompatActivity() {
         initView()
         setValuesToViews()
 
-        update=findViewById(R.id.updateBtn)
+        inupdate=findViewById(R.id.inupdateBtn)
 
-        update.setOnClickListener{
+        inupdate.setOnClickListener{
             updateStatus(
                 intent.getStringExtra("orderId").toString()
             )
@@ -44,7 +44,7 @@ class popdelivery : AppCompatActivity() {
     private fun updateStatus(id:String){
         val dbref= FirebaseDatabase.getInstance().getReference("Order").child(id)
 
-        val update = findViewById<Button>(R.id.updateBtn)
+        val update = findViewById<Button>(R.id.inupdateBtn)
         update.setOnClickListener {
             val mTask=dbref.child("status").setValue("Complete")
             mTask.addOnSuccessListener {

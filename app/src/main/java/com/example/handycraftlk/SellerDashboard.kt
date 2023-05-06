@@ -100,7 +100,7 @@ class SellerDashboard : AppCompatActivity() {
 
     }
     private fun btnAddProduct(view: View) {
-        val intent = Intent(this, SellerAddProduct::class.java)
+        val intent = Intent(this, SellerOrdersFragmentMain::class.java)
         startActivity(intent)
         finish()
     }
