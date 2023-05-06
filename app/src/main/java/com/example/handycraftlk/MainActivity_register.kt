@@ -41,12 +41,18 @@ class MainActivity_register : AppCompatActivity() {
             val password = binding.edtPwd.text.toString()
             val rePassword = binding.edtRePwd.text.toString()
 
-            if (!isValidName(name)) {
+            if (name.isEmpty()) {
+                binding.edtName.error = "Name is Empty"
+            }else if (!isValidName(name)) {
                 binding.edtName.error = "Invalid name"
-            } else if (!isValidEmail(email)) {
+            }else if (email.isEmpty()) {
+                binding.edtEmail.error = "Email is Empty"
+            }else if (!isValidEmail(email)) {
                 binding.edtEmail.error = "Invalid email"
             } else if (phoneNumber.isEmpty()) {
                 binding.edtPhone.error = "Phone Number is Empty"
+            }else if (password.isEmpty()) {
+                binding.edtPwd.error = "Password is Empty"
             } else if (!isValidPassword(password)) {
                 binding.edtPwd.error = "Password is Invalid"
             } else if (rePassword.isEmpty()) {

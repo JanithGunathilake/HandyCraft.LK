@@ -28,7 +28,7 @@
                     android:layout_height="wrap_content" />
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/btnBackSellerProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/wood_spoon" />

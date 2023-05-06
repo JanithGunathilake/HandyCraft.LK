@@ -1,3 +1,9 @@
+
+
+
+
+   
+
 <resources>
 
     <string name="app_name" translatable="false">HandyCraft.LK</string>
@@ -77,7 +83,7 @@
     <string name="LoginEmailAddress" translatable="false">Login Email Address</string>
     <string name="email" translatable="false">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
     <string name="PhoneNumber" translatable="false">Phone Number</string>
-    <string name="phone" translatable="false">071-XXXXXXX</string>
+    <string name="phone" translatable="false">071XXXXXXX</string>
     <string name="ChangePassword" translatable="false">Change Password</string>
     <string name="AddedProducts" translatable="false">Added Products</string>
     <string name="Update" translatable="false">Update</string>
@@ -200,8 +206,11 @@
     <string name="ordersrefrocess" translatable="false">"  Order 21312798892                    placed on 18 Feb 2023 01:19:24"</string>
     <string name="a" translatable="false">abc</string>
     <string name="cvv" translatable="false">764</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="jkemail" translatable="false">your_mail@gmail.com</string>
+    <string name="emailProfile" translatable="false">Email</string>
+    <string name="emailllll" translatable="false">Email</string>
+    <string name="phoneee" translatable="false">Mobile Number</string>
+    <string name="next" translatable="false">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

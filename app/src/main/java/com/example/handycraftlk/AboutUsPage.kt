@@ -4,18 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.handycraftlk.R
 
-class MainActivity_home : AppCompatActivity() {
+class AboutUsPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_home)
+        setContentView(R.layout.activity_about_us_page)
     }
+    fun btnGetStart(v: View){
 
-    fun buttonClick(v: View){
-
-        val intent = Intent(this, itemView::class.java)
+        val intent = Intent(this, MainActivity_register::class.java)
         startActivity(intent)
         finish()
     }

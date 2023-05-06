@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonLogin(v: View){
 
-        val intent = Intent(this, MainActivity_register::class.java)
+        val intent = Intent(this, AboutUsPage::class.java)
         startActivity(intent)
         finish()
     }

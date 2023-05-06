@@ -5,6 +5,10 @@ class SessionManager(context: Context) {
     private val sharedPreferences = context.getSharedPreferences("session", Context.MODE_PRIVATE)
     private val editor = sharedPreferences.edit()
 
+    companion object {
+        const val KEY_EMAIL = "email"
+    }
+
     fun saveSession(email: String, password: String) {
         editor.putBoolean("isLoggedIn", true)
         editor.putString("email", email)
@@ -16,6 +20,7 @@ class SessionManager(context: Context) {
         val sessionData = HashMap<String, String>()
         sessionData["email"] = sharedPreferences.getString("email", "").toString()
         sessionData["password"] = sharedPreferences.getString("password", "").toString()
+        sessionData["id"] = sharedPreferences.getString("id","").toString()
         return sessionData
     }
 

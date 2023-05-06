@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handycraftlk.databinding.ActivityAccountInformationUpdateBinding
 import com.google.firebase.database.*
@@ -62,6 +63,49 @@ class AccountInformationUpdate : AppCompatActivity(){
             }
         })
 
+        binding.btnDelete.setOnClickListener {
+            // Show a confirmation dialog
+            AlertDialog.Builder(this)
+                .setTitle("Confirm Delete")
+                .setMessage("Are you sure you want to delete your account?")
+                .setPositiveButton("Yes") { _, _ ->
+                    // Delete the user details if the user confirms
+                    val query = userRef.orderByChild("email").equalTo(userEmail)
+                    query.addListenerForSingleValueEvent(object : ValueEventListener {
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            if (snapshot.exists()) {
+                                for (userSnapshot in snapshot.children) {
+                                    userRef.child(userSnapshot.key!!).removeValue()
+                                }
+                                // Show a success message
+                                Toast.makeText(
+                                    this@AccountInformationUpdate,
+                                    "User details deleted",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                // Go back to the login page
+                                sessionManager.logout()
+                                val intent = Intent(this@AccountInformationUpdate, MainActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            Log.e(ContentValues.TAG, "Failed to delete user details", error.toException())
+                            // Show an error message
+                            Toast.makeText(
+                                this@AccountInformationUpdate,
+                                "Failed to delete user details",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    })
+                }
+                .setNegativeButton("No", null)
+                .show()
+        }
+
 
         binding.btnDone.setOnClickListener {
             val name = binding.tvNameAcc.text.toString()
@@ -82,13 +126,17 @@ class AccountInformationUpdate : AppCompatActivity(){
                         binding.tvNameAcc.setText(name)
                         binding.tvPhone.setText(phoneNumber)
 
-
                         // Show a success message
                         Toast.makeText(
                             this@AccountInformationUpdate,
                             "User details updated",
                             Toast.LENGTH_SHORT
                         ).show()
+
+                        // Refresh the AccInformation activity
+                        val intent = Intent(this@AccountInformationUpdate, AccInfomation::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                 }
 
@@ -102,6 +150,7 @@ class AccountInformationUpdate : AppCompatActivity(){
                     ).show()
                 }
             })
+
 
             val intent = Intent(this, Home::class.java)
             startActivity(intent)

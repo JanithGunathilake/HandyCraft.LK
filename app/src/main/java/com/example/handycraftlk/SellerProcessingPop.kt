@@ -42,7 +42,7 @@ class SellerProcessingPop : AppCompatActivity() {
     private fun updateStatus(id:String){
         val dbref= FirebaseDatabase.getInstance().getReference("Order").child(id)
 
-        val update = findViewById<Button>(R.id.updateBtn)
+        val update = findViewById<Button>(R.id.spupdateBtn)
         update.setOnClickListener {
           val  mTask=dbref.child("status").setValue("In Delivery")
             mTask.addOnSuccessListener {

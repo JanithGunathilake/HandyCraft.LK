@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SellerAddProduct">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -20,7 +21,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/btnBackAddProduct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,12 +94,14 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/productNameTextSize" />
 
-                <TextView
-                    android:id="@+id/textView8"
+                <EditText
+                    android:id="@+id/edtProductName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Lamp"
-                    android:textSize="20sp" />
+                    android:minHeight="48dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,33 +130,15 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="93dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:text="@string/Set"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/setTextSize" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="54dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/next_button" />
+                    <Spinner
+                        android:id="@+id/categoryspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -173,12 +158,14 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/descTextSize" />
 
-                <TextView
-                    android:id="@+id/textView21"
+                <EditText
+                    android:id="@+id/edtDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc_info"
-                    android:textSize="20sp" />
+                    android:minHeight="48dp"
+                    android:text=""
+                    android:textSize="15sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,12 +183,14 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/priceTextSize" />
 
-                <TextView
-                    android:id="@+id/textView20"
+                <EditText
+                    android:id="@+id/edtPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/priceValue"
-                    android:textSize="24sp" />
+                    android:minHeight="48dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -216,14 +205,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btnConfirm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="@color/Green"
                         android:text="@string/Confirm"
                         android:textAlignment="center"
-                        tools:cornerRadius="50dp" />
+                        app:cornerRadius="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -232,7 +221,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btnCancelAddProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

@@ -7,7 +7,7 @@
     tools:context=".FirstPage">
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/btnBackView"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginStart="55dp"

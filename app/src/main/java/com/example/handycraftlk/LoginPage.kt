@@ -59,7 +59,11 @@ class LoginPage : AppCompatActivity() {
                                             val intent = Intent(this, Home::class.java)
                                             startActivity(intent)
                                             finish()
-                                        }
+                                        } else if(role == "Admin") {
+                                            val intent = Intent(this, AdminDashboard::class.java)
+                                            startActivity(intent)
+                                            finish()
+                                         }
                                         else {
                                             Toast.makeText(this, "Failed to get user role:", Toast.LENGTH_SHORT).show()
                                         }
