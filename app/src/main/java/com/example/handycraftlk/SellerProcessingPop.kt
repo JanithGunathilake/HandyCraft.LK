@@ -17,7 +17,7 @@ class SellerProcessingPop : AppCompatActivity() {
     private lateinit var addressView: TextView
     private lateinit var productView: TextView
 
-    private lateinit var update: Button
+    private lateinit var spupdate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +25,10 @@ class SellerProcessingPop : AppCompatActivity() {
         initView()
         setValuesToViews()
 
-        update=findViewById(R.id.updateBtn)
+        spupdate=findViewById(R.id.spupdateBtn)
 
 
-        update.setOnClickListener{
+        spupdate.setOnClickListener{
             updateStatus(
                 intent.getStringExtra("orderId").toString()
             )

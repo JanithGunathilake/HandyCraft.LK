@@ -16,7 +16,7 @@ class orderDetailsPop : AppCompatActivity() {
     private lateinit var addressView: TextView
     private lateinit var productView: TextView
     private lateinit var deleteBtn:Button
-    private lateinit var update:Button
+    private lateinit var pupdate:Button
 
    // private lateinit var quantity : TextView
 
@@ -27,9 +27,9 @@ class orderDetailsPop : AppCompatActivity() {
         initView()
         setValuesToViews()
         deleteBtn = findViewById(R.id.deleteBtn)
-        update=findViewById(R.id.updateBtn)
+        pupdate=findViewById(R.id.pupdateBtn)
 
-        update.setOnClickListener{
+        pupdate.setOnClickListener{
             updateStatus(
                 intent.getStringExtra("orderId").toString()
             )
@@ -48,7 +48,7 @@ class orderDetailsPop : AppCompatActivity() {
     private fun updateStatus(id:String){
         val dbref=FirebaseDatabase.getInstance().getReference("Order").child(id)
 
-        val update = findViewById<Button>(R.id.updateBtn)
+        val update = findViewById<Button>(R.id.pupdateBtn)
         update.setOnClickListener {
             val mTask=dbref.child("status").setValue("Processing")
             mTask.addOnSuccessListener {
