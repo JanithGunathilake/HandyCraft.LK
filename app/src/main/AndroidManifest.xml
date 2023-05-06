@@ -194,13 +194,8 @@
             android:name=".COrdersFragmentMain"
             android:exported="false">
         </activity>
-        <activity
-            android:name=".MainActivity_home"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
         <activity
             android:name=".MainActivity_register"
             android:exported="false">

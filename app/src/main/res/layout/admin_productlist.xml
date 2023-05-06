@@ -347,6 +347,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:background="#E4B51F">

@@ -62,7 +62,7 @@
                 android:layout_width="373dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/btnYellow"
                 android:text="@string/AddNewCategory"
                 android:textColor="@color/white"
                 android:textSize="@dimen/btn_text_size" />
@@ -73,7 +73,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCategory"
         android:layout_width="match_parent"
-        android:layout_height="448dp">
+        android:layout_height="541dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

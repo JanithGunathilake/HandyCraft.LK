@@ -155,11 +155,13 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:weightSum="3"
                 android:layout_width="match_parent"
                 android:layout_height="127dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:layout_weight="1"
                     android:layout_width="137dp"
                     android:layout_height="match_parent"
                     android:background="#D3D3D3"
@@ -198,6 +200,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_weight="1"
                     android:layout_width="116dp"
                     android:layout_height="127dp"
                     android:background="#C0C0C0"
@@ -236,6 +239,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="128dp"
                     android:background="#D3D3D3"
@@ -298,6 +302,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#E6B71F"
@@ -310,10 +315,10 @@
 
             <ImageView
                 android:id="@+id/imageView54"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/baseline_home_24" />
+                app:srcCompat="@drawable/ic_baseline_home_24" />
         </LinearLayout>
 
         <LinearLayout
@@ -324,8 +329,8 @@
 
             <ImageView
                 android:id="@+id/btnAdd"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/download_removebg_preview" />
@@ -338,8 +343,8 @@
 
             <ImageView
                 android:id="@+id/btnViewProduct"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/category_icon_256" />
