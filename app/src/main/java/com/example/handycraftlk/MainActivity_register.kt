@@ -112,4 +112,10 @@ class MainActivity_register : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+    fun buttonClick(v: View){
+
+        val intent = Intent(this, LoginPage::class.java)
+        startActivity(intent)
+        finish()
+    }
 }
