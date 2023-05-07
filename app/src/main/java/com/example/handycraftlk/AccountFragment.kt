@@ -83,7 +83,7 @@ class AccountFragment : Fragment() {
         AboutUs = binding.root.findViewById(R.id.btnAboutUs)
         AboutUs.setOnClickListener {
 
-            val intent = Intent(activity, AboutUsPage::class.java)
+            val intent = Intent(activity, AboutUsPage2::class.java)
             startActivity(intent)
             activity?.finish()
 

@@ -13,6 +13,13 @@
         android:theme="@style/Theme.HandyCraftLK"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUsPage2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SdeliveryItem"
             android:exported="false">
             <meta-data
@@ -196,7 +203,7 @@
         </activity>
         <activity
             android:name=".COrdersFragmentMain"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity_register"
             android:exported="false">

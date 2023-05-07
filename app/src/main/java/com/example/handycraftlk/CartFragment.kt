@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handycraftlk.adaptors.CartAdaptor
@@ -53,11 +54,16 @@ class CartFragment : Fragment() {
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
+                        var totalPrice = 0.0
                         for (cartSnapshot in snapshot.children) {
                             val cart = cartSnapshot.getValue(Cart::class.java)
                             cartArrayList.add(cart!!)
+                            totalPrice += cart.proPrice?.toDoubleOrNull() ?: 0.0
                         }
                         cartRecyclerView.adapter = CartAdaptor(cartArrayList)
+                        // Show the total price on the screen
+                        val totalPriceTextView = view?.findViewById<TextView>(R.id.totalPriceTextView)
+                        totalPriceTextView?.text = "Total Price: $totalPrice" // or format the price as needed
                     }
                 }
                 override fun onCancelled(error: DatabaseError) {
@@ -65,5 +71,6 @@ class CartFragment : Fragment() {
                 }
             })
     }
+
 
 }
