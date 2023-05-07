@@ -49,7 +49,7 @@ class popdelivery : AppCompatActivity() {
             val mTask=dbref.child("status").setValue("Complete")
             mTask.addOnSuccessListener {
                 Toast.makeText(this,"Data Updated", Toast.LENGTH_SHORT).show()
-                val intent= Intent(this,SellerInDeliveryOrderHistory::class.java)
+                val intent= Intent(this,SellerPendingOrderHistory::class.java)
                 finish()
                 startActivity(intent)
             } .addOnFailureListener { error ->

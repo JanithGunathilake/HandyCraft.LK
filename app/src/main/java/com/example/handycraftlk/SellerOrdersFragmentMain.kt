@@ -1,11 +1,13 @@
 package com.example.handycraftlk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.fragment.app.Fragment
-import com.example.handycraftlk.databinding.ActivitySellerOrdersFragmentMainBinding
-import com.example.handycraftlk.databinding.CheckoutCustomerBinding
+
+
 
 class SellerOrdersFragmentMain : AppCompatActivity() {
     private lateinit var spending: TextView
@@ -58,5 +60,14 @@ class SellerOrdersFragmentMain : AppCompatActivity() {
                 replace(R.id.fragview,sellerInDeliveryOrderHistroy)
                 commit()            }
         }
+        val btnSellerBackImage = findViewById<ImageView>(R.id.imageView2)
+        btnSellerBackImage.setOnClickListener { view ->
+            btnBack(view)
+        }
+    }
+    private fun btnBack(view: View) {
+        val intent = Intent(this, SellerDashboard::class.java)
+        startActivity(intent)
+        finish()
     }
 }

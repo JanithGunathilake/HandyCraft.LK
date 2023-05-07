@@ -7,7 +7,7 @@
     tools:context=".SellerInDeliveryOrderHistory">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recf"
+        android:id="@+id/deliveryhistory"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

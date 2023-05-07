@@ -1,7 +1,10 @@
 package com.example.handycraftlk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -54,6 +57,17 @@ class COrdersFragmentMain : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fragview,customerInDeliveryHistory)
                 commit()            }
+
         }
+        val btnSellerBackImage = findViewById<ImageView>(R.id.imageView2)
+        btnSellerBackImage.setOnClickListener { view ->
+            btnBack(view)
+        }
+    }
+
+    private fun btnBack(view: View) {
+        val intent = Intent(this, SellerDashboard::class.java)
+        startActivity(intent)
+        finish()
     }
 }
