@@ -38,13 +38,13 @@ class SellerProcessingPop : AppCompatActivity() {
 
 
 
-    @SuppressLint("SuspiciousIndentation")
+
     private fun updateStatus(id:String){
         val dbref= FirebaseDatabase.getInstance().getReference("Order").child(id)
 
         val update = findViewById<Button>(R.id.spupdateBtn)
         update.setOnClickListener {
-          val  mTask=dbref.child("status").setValue("In Delivery")
+          val mTask=dbref.child("status").setValue("In Delivery")
             mTask.addOnSuccessListener {
                 Toast.makeText(this,"Data Updated",Toast.LENGTH_SHORT).show()
                 val intent=Intent(this,SellerProcessingOrderHistory::class.java)

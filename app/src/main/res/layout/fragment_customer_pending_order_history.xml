@@ -6,7 +6,7 @@
     tools:context=".CustomerPendingOrderHistory">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/deliveryPending"
+        android:id="@+id/processpending"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

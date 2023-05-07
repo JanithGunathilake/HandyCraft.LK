@@ -1,6 +1,7 @@
 package com.example.handycraftlk
 
 
+import SessionManager
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,12 +19,12 @@ class SellerPendingOrderHistory : Fragment() {
     private lateinit var dbref : DatabaseReference
     private lateinit var orderRecycleView : RecyclerView
     private lateinit var orderArrayList : ArrayList<Order>
-
+    private lateinit var sessionManager: SessionManager
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_seller_pending_order_history, container, false)
 
 
-        orderRecycleView = view.findViewById(R.id.deliveryPending)
+        orderRecycleView = view.findViewById(R.id.ssPending)
         orderRecycleView.layoutManager = LinearLayoutManager(context)
         orderRecycleView.setHasFixedSize(true)
         orderArrayList = arrayListOf<Order>()
@@ -52,16 +53,20 @@ class SellerPendingOrderHistory : Fragment() {
 
 
     private fun fetchPendingOrders() {
+        sessionManager = SessionManager(requireContext())
+        val userEmail = sessionManager.getSession().get(SessionManager.KEY_EMAIL)
         val dbRef = FirebaseDatabase.getInstance().getReference("Order")
-        val query = dbRef.orderByChild("status").equalTo("Pending")
+        val query = dbRef.orderByChild("sellerId").equalTo(userEmail)
 
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val orderArrayList = ArrayList<Order>()
                 for (itemSnapshot in snapshot.children) {
                     val order = itemSnapshot.getValue(Order::class.java)
+                    val status = order?.status
+                    if (status == "Pending") {
                     order?.let { orderArrayList.add(it) }
-                }
+                }}
                 // populate the RecyclerView with the data
                 val adapter = SPendingOrderAdapter(orderArrayList)
                 orderRecycleView.adapter = adapter
