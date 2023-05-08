@@ -86,12 +86,14 @@ class CustomerCheckout : AppCompatActivity() {
                 binding.visaCard.text.clear()
                 binding.cvv.text.clear()
                 binding.cusAddress.text.clear()
-                Toast.makeText(this,"sucess message adddedd",Toast.LENGTH_SHORT).show()
             }.addOnFailureListener{
                 Toast.makeText(this,"Fail",Toast.LENGTH_SHORT).show()
             }
 
            i++}//end for
+            Toast.makeText(this,"sucess message addded",Toast.LENGTH_SHORT).show()
+
+
         removeCartDataForUser()
         }
         val btnSellerBackImage = findViewById<ImageView>(R.id.backpage)
@@ -146,6 +148,10 @@ class CustomerCheckout : AppCompatActivity() {
                             totalPrice += cart.proPrice?.toDoubleOrNull() ?: 0.0
                         }
                         itemRecyclerView.adapter = CartAdaptor(cartArrayList)
+
+
+                        val totalPriceTextView =findViewById<TextView>(R.id.chFinalTotal)
+                        totalPriceTextView?.text = "Total Price: $totalPrice"
 
                     }
                 }
