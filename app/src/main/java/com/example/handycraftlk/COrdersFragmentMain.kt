@@ -66,7 +66,7 @@ class COrdersFragmentMain : AppCompatActivity() {
     }
 
     private fun btnBack(view: View) {
-        val intent = Intent(this, SellerDashboard::class.java)
+        val intent = Intent(this, Home::class.java)
         startActivity(intent)
         finish()
     }

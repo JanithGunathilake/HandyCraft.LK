@@ -1,5 +1,5 @@
 package com.example.handycraftlk
-
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -33,8 +33,14 @@ class CustomerCheckout : AppCompatActivity() {
         getUserData()
 
 
-        //insert
+      // insert
+
         binding.placeOrder.setOnClickListener(){
+            var i= 0
+            var j =itemArrayList.size
+           while(i<j){
+
+
 
             val address=binding.cusAddress.text.toString()
             val visaCard=binding.visaCard.text.toString()
@@ -45,13 +51,17 @@ class CustomerCheckout : AppCompatActivity() {
             val email="123@gmail.com";
             val status="Pending"
 
+            val productId= itemArrayList[i].status.toString()
+
+
+
             val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
             val dt=LocalDateTime.now().format(formatter).toString()
             val sellerId="456"
             val orderId=database.push().key!!
 
             database= FirebaseDatabase.getInstance().getReference("Order")
-            val Order=Order(address,visaCard,cvv, quantity,itemName,totalAmount,email,orderId,dt,status,sellerId)
+            val Order=Order(address,visaCard,cvv, quantity,itemName,totalAmount,email,orderId,dt,status,sellerId,productId)
             database.child(orderId).setValue(Order).addOnSuccessListener {
                 binding.visaCard.text.clear()
                 binding.cvv.text.clear()
@@ -60,6 +70,8 @@ class CustomerCheckout : AppCompatActivity() {
             }.addOnFailureListener{
                 Toast.makeText(this,"Fail",Toast.LENGTH_SHORT).show()
             }
+
+           i++}//end for
 
         }
 
@@ -76,6 +88,8 @@ class CustomerCheckout : AppCompatActivity() {
 
                         val item=itemSnapShot.getValue(Order::class.java)
                         itemArrayList.add(item!!)
+
+
                     }
                     itemRecyclerView.adapter= MyAdapter(itemArrayList)
                 }

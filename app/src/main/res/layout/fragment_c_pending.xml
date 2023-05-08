@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".CPending">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,15 +104,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="94dp"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="44dp"
-                    android:backgroundTint="#DD3B3B"
-                    android:text="Cancel"
-                    android:textAlignment="viewStart"
-                    android:textSize="12sp" />
+<!--                <Button-->
+<!--                    android:id="@+id/button8"-->
+<!--                    android:layout_width="94dp"-->
+<!--                    android:layout_height="36dp"-->
+<!--                    android:layout_marginTop="44dp"-->
+<!--                    android:backgroundTint="#DD3B3B"-->
+<!--                    android:text="Cancel"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:textSize="12sp" />-->
 
 
             </androidx.cardview.widget.CardView>
