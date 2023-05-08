@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,6 +28,14 @@ class CartFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_cart, container, false)
+
+        val checkoutButton = view.findViewById<Button>(R.id.checkoutButton)
+        if (checkoutButton != null) {
+            checkoutButton.setOnClickListener {
+                removeCartDataForUser()
+            }
+        }
+
         cartRecyclerView = view.findViewById(R.id.rvCartItem)
         cartRecyclerView.setHasFixedSize(true)
         cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -43,8 +52,8 @@ class CartFragment : Fragment() {
         getCartData()
 
         return view
-
     }
+
 
     private fun getCartData() {
         val userEmail = sessionManager.getEmail()
@@ -71,6 +80,34 @@ class CartFragment : Fragment() {
                 }
             })
     }
+
+    private fun removeCartDataForUser() {
+        val userEmail = sessionManager.getEmail()
+        dbref = FirebaseDatabase.getInstance().getReference("Cart")
+
+        dbref.orderByChild("buyerEmail").equalTo(userEmail)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        for (cartSnapshot in snapshot.children) {
+                            val cart = cartSnapshot.getValue(Cart::class.java)
+                            if (cart?.buyerEmail == userEmail) {
+                                cartSnapshot.ref.removeValue()
+                            }
+                        }
+                        // Add an Intent to start the CustomerCheckout activity
+                        val intent = Intent(activity, CustomerCheckout::class.java)
+                        startActivity(intent)
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error here
+                }
+            })
+    }
+
+
 
 
 }
