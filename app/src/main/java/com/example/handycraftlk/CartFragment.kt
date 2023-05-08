@@ -72,7 +72,7 @@ class CartFragment : Fragment() {
                         cartRecyclerView.adapter = CartAdaptor(cartArrayList)
                         // Show the total price on the screen
                         val totalPriceTextView = view?.findViewById<TextView>(R.id.totalPriceTextView)
-                        totalPriceTextView?.text = "Total Price: $totalPrice" // or format the price as needed
+                        totalPriceTextView?.text = "Total Price: $totalPrice"
                     }
                 }
                 override fun onCancelled(error: DatabaseError) {

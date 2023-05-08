@@ -11,5 +11,6 @@ data class Order(val address:String?=null,
                  val dt:String?=null,
                  val status:String?=null,
                  val sellerId:String?=null,
+                 val productId:String?=null,
 
                  )
