@@ -206,7 +206,7 @@
     <string name="phoneee" translatable="false">Mobile Number</string>
     <string name="next" translatable="false">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
