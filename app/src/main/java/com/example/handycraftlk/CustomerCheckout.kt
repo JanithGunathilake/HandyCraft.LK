@@ -1,12 +1,20 @@
 package com.example.handycraftlk
+import SessionManager
+import android.content.Intent
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handycraftlk.adaptors.CartAdaptor
 import com.example.handycraftlk.adaptors.MyAdapter
 import com.example.handycraftlk.databinding.CheckoutCustomerBinding
+import com.example.handycraftlk.models.Cart
 import com.example.handycraftlk.models.Order
 import com.google.firebase.database.*
 import java.time.LocalDateTime
@@ -16,10 +24,14 @@ class CustomerCheckout : AppCompatActivity() {
     private lateinit var binding: CheckoutCustomerBinding
     private lateinit var  database:DatabaseReference
     private lateinit var itemRecyclerView: RecyclerView
-    private lateinit var itemArrayList: ArrayList<Order>
+    //private lateinit var itemArrayList: ArrayList<Order>
+    private lateinit var cartArrayList: ArrayList<Cart>
+    private lateinit var sessionManager: SessionManager
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
 
         super.onCreate(savedInstanceState)
         binding = CheckoutCustomerBinding.inflate(layoutInflater)
@@ -29,35 +41,43 @@ class CustomerCheckout : AppCompatActivity() {
         itemRecyclerView=findViewById(R.id.checkoutitems)
         itemRecyclerView.layoutManager=LinearLayoutManager(this)
         itemRecyclerView.setHasFixedSize(true)
-        itemArrayList= arrayListOf<Order>()
-        getUserData()
+        cartArrayList= arrayListOf<Cart>()
+        getCartData()
 
 
       // insert
 
         binding.placeOrder.setOnClickListener(){
+
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+            finish()
+
+
             var i= 0
-            var j =itemArrayList.size
+            var j =cartArrayList.size
            while(i<j){
 
 
-
+               val userEmail = sessionManager.getEmail()
             val address=binding.cusAddress.text.toString()
             val visaCard=binding.visaCard.text.toString()
             val cvv= binding.cvv.text.toString()
-            val quantity="10";
-            val totalAmount="250";
+            val quantity="10"
+            val totalAmount= cartArrayList[i].proPrice.toString()
+            val email=userEmail.toString()
             val itemName="oooooo";
-            val email="123@gmail.com";
-            val status="Pending"
 
-            val productId= itemArrayList[i].status.toString()
+            val status="Pending"
+                 val productId= cartArrayList[i].proName.toString()
 
 
 
             val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
             val dt=LocalDateTime.now().format(formatter).toString()
-            val sellerId="456"
+               val sellerId= cartArrayList[i].sellerEmail.toString()
+
+
             val orderId=database.push().key!!
 
             database= FirebaseDatabase.getInstance().getReference("Order")
@@ -72,35 +92,96 @@ class CustomerCheckout : AppCompatActivity() {
             }
 
            i++}//end for
-
+        removeCartDataForUser()
+        }
+        val btnSellerBackImage = findViewById<ImageView>(R.id.backpage)
+        btnSellerBackImage.setOnClickListener { view ->
+            btnBack(view)
         }
 
 
 
-
     }
-    private fun getUserData(){
-        database=FirebaseDatabase.getInstance().getReference("Order")
-        database.addValueEventListener(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-                    for(itemSnapShot in snapshot.children){
+//    private fun getUserData(){
+//        database=FirebaseDatabase.getInstance().getReference("Cart")
+//        database.orderByChild("buyerEmail").equalTo("janithkavinda49@gmail.com")
+//        database.addValueEventListener(object :ValueEventListener{
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if(snapshot.exists()){
+//                    for(itemSnapShot in snapshot.children){
+//
+//                        val item=itemSnapShot.getValue(Order::class.java)
+//                        itemArrayList.add(item!!)
+//
+//
+//                    }
+//                    itemRecyclerView.adapter= MyAdapter(itemArrayList)
+//                }
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                TODO("Not yet implemented")
+//            }
+//
+//        })
+//
+//
+//    }
 
-                        val item=itemSnapShot.getValue(Order::class.java)
-                        itemArrayList.add(item!!)
 
+    private fun getCartData() {
+        sessionManager = SessionManager(this)
+
+         val userEmail = sessionManager.getEmail()
+        database = FirebaseDatabase.getInstance().getReference("Cart")
+
+        database.orderByChild("buyerEmail").equalTo(userEmail)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        var totalPrice = 0.0
+                        for (cartSnapshot in snapshot.children) {
+                            val cart = cartSnapshot.getValue(Cart::class.java)
+                            cartArrayList.add(cart!!)
+                            totalPrice += cart.proPrice?.toDoubleOrNull() ?: 0.0
+                        }
+                        itemRecyclerView.adapter = CartAdaptor(cartArrayList)
 
                     }
-                    itemRecyclerView.adapter= MyAdapter(itemArrayList)
                 }
-            }
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error here
+                }
+            })
+    }
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
+    private fun btnBack(view: View) {
+        val intent = Intent(this, Home::class.java)
+        startActivity(intent)
+        finish()
+    }
 
-        })
+    private fun removeCartDataForUser() {
+        val userEmail = sessionManager.getEmail()
+        database = FirebaseDatabase.getInstance().getReference("Cart")
 
+        database.orderByChild("buyerEmail").equalTo(userEmail)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        for (cartSnapshot in snapshot.children) {
+                            val cart = cartSnapshot.getValue(Cart::class.java)
+                            if (cart?.buyerEmail == userEmail) {
+                                cartSnapshot.ref.removeValue()
+                            }
+                        }
 
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error here
+                }
+            })
     }
 }

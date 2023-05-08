@@ -22,7 +22,7 @@ class MyAdapter(private  val orderList:ArrayList<Order> ): RecyclerView.Adapter 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem= orderList[position]
         var v="Ref no "
-        holder.itemName.text=currentItem.itemName
+        holder.productId.text=currentItem.productId
         holder.quantity.text=currentItem.quantity
         holder.dt.text=currentItem.dt
         holder.orderId.text=v+currentItem.orderId
@@ -35,7 +35,7 @@ class MyAdapter(private  val orderList:ArrayList<Order> ): RecyclerView.Adapter 
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
-        val itemName:TextView=itemView.findViewById(R.id.pname)
+        val productId:TextView=itemView.findViewById(R.id.pname)
         val quantity:TextView=itemView.findViewById(R.id.pquantity)
         val dt:TextView=itemView.findViewById(R.id.dateTime)
         val orderId:TextView=itemView.findViewById(R.id.orderId)
