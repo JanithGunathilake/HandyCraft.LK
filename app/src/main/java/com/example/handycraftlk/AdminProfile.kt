@@ -10,7 +10,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import com.example.handycraftlk.databinding.ActivityAdminProfileBinding
-import com.example.handycraftlk.databinding.ActivitySellerProfileBinding
 import com.google.firebase.database.*
 
 class AdminProfile : AppCompatActivity() {

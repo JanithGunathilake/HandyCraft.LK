@@ -9,7 +9,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handycraftlk.adaptors.MyAdaptorD
-import com.example.handycraftlk.adaptors.MyAdaptorM
 import com.example.handycraftlk.databinding.ActivityAdminCategoryBinding
 import com.example.handycraftlk.models.Category
 import com.google.firebase.database.*
