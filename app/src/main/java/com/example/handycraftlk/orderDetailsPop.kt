@@ -26,6 +26,7 @@ class orderDetailsPop : AppCompatActivity() {
         setContentView(R.layout.activity_order_details_pop)
         initView()
         setValuesToViews()
+        //initialized, and their click listeners are defined
         deleteBtn = findViewById(R.id.deleteBtn)
         pupdate=findViewById(R.id.pupdateBtn)
 
@@ -45,6 +46,7 @@ class orderDetailsPop : AppCompatActivity() {
     }
 
 
+    //update the order status by accessing the Firebase Realtime Database
     private fun updateStatus(id:String){
         val dbref=FirebaseDatabase.getInstance().getReference("Order").child(id)
 
@@ -65,6 +67,7 @@ class orderDetailsPop : AppCompatActivity() {
     }
 
 
+    // delete the order from the Firebase Realtime Database
     @SuppressLint("SuspiciousIndentation")
     private  fun deleterecord(id:String){
         val dbref=FirebaseDatabase.getInstance().getReference("Order").child(id)
