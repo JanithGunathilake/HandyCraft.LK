@@ -12,8 +12,11 @@ import com.example.handycraftlk.R
 
 class OrderFragment : Fragment() {
 
-    private lateinit var btnClickHere : Button
+
+
+    private lateinit var btnClickHere : Button//launches a new activity
     private lateinit var sessionManager: SessionManager
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,7 +24,7 @@ class OrderFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_order, container, false)
-        btnClickHere = view.findViewById(R.id.btnClickHere)
+        btnClickHere = view.findViewById(R.id.btnClickHere)// initializing
         btnClickHere.setOnClickListener {
 
             val intent = Intent(activity, COrdersFragmentMain::class.java)

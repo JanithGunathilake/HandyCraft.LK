@@ -19,17 +19,21 @@ import com.google.firebase.database.ValueEventListener
 
 class SellerDashboard : AppCompatActivity() {
 
+    //declaring variables
     private lateinit var sessionManager : SessionManager
     private lateinit var database : DatabaseReference
     private lateinit var binding : ActivitySellerDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // inflates the layout XML file and returns a binding object
         binding = ActivitySellerDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //initializing session manager
         sessionManager = SessionManager(this)
 
+        // checks if the user is already logged in
         if (!sessionManager.isLoggedIn()) {
             val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
@@ -37,13 +41,19 @@ class SellerDashboard : AppCompatActivity() {
         }
 
 
+        //retrieving user's email from the session manager
         val userEmail = sessionManager.getEmail()
+        //get a reference to the Firebase Realtime Database.
         database = FirebaseDatabase.getInstance().reference
 
+        // reference to the Users node in the database.
         val userRef = database.child("Users")
+        //initialized with a query to search for the user with the given email
         val query = userRef.orderByChild("email").equalTo(userEmail)
 
+        // retrieves the user's details if the query returns a result
         query.addListenerForSingleValueEvent(object : ValueEventListener {
+           //user's details are retrieved and displayed in the UI.
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (userSnapshot in snapshot.children) {
@@ -61,6 +71,7 @@ class SellerDashboard : AppCompatActivity() {
                 }
             }
 
+            //error message is logged
             override fun onCancelled(error: DatabaseError) {
                 Log.e(ContentValues.TAG, "Failed to read user details", error.toException())
             }
@@ -80,6 +91,7 @@ class SellerDashboard : AppCompatActivity() {
 
 
 
+        //sets up click listeners for Each button
         val btnAddProductImage = findViewById<ImageView>(R.id.btnAdd)
         btnAddProductImage.setOnClickListener { view ->
             btnAddProduct(view)
@@ -99,6 +111,7 @@ class SellerDashboard : AppCompatActivity() {
 
 
     }
+    //when the corresponding button is clicked it loads different activity
     private fun btnAddProduct(view: View) {
         val intent = Intent(this, SellerOrdersFragmentMain::class.java)
         startActivity(intent)

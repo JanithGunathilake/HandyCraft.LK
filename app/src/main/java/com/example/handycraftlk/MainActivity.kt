@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.handycraftlk.databinding.ActivityAccInfomationBinding
-import com.example.handycraftlk.databinding.ActivityMainBinding
-import com.google.firebase.database.DatabaseReference
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
        getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
+        //sets the user interface layout
         setContentView(R.layout.activity_main)
 
 
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, AboutUsPage::class.java)
         startActivity(intent)
-        finish()
+        finish()//destroy the current activity
     }
 
 

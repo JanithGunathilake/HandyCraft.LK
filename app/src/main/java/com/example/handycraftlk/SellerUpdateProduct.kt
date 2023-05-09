@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class SellerUpdateProduct : AppCompatActivity() {
 
+    //Define variables for the view elements:
     private lateinit var tvUpdateProName : TextView
     private lateinit var tvUpdateProPrice : TextView
     private lateinit var tvUpdateProDescription : TextView
@@ -25,9 +26,11 @@ class SellerUpdateProduct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seller_update_product)
+        //set the values of the different view elements
         setValuesToViews()
 
 
+        // Check if user is logged in
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -35,6 +38,7 @@ class SellerUpdateProduct : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
 
         btnSellerUpdateProduct = findViewById(R.id.btnSellerUpdateProduct)
         btnSellerProductDelete = findViewById(R.id.btnSellerProductDelete)
@@ -57,9 +61,11 @@ class SellerUpdateProduct : AppCompatActivity() {
 
     }
 
+    // used to delete a product record from the database when the delete button is clicked
     private fun deleteRecord(
         productId : String
     ){
+        // gets the reference to the Product node in the database
         val dbref = FirebaseDatabase.getInstance().getReference("Product").child(productId)
         val mTask = dbref.removeValue()
 
@@ -74,11 +80,13 @@ class SellerUpdateProduct : AppCompatActivity() {
         }
     }
 
+    //opens a dialog box to allow the user to update the product details
     private fun openUpdateDialog(
         productId : String,
         proName : String
     ){
         val mDialog = AlertDialog.Builder(this)
+        //layout for the update dialog is inflated
         val inflater = layoutInflater
         val mDialogView = inflater.inflate(R.layout.product_update_dialog, null)
 
@@ -89,17 +97,20 @@ class SellerUpdateProduct : AppCompatActivity() {
         val edtDescription = mDialogView.findViewById<EditText>(R.id.editProductDescription)
         val btnUpdate = mDialogView.findViewById<Button>(R.id.btnUp)
 
+        //setting values
         edtProName.setText(intent.getStringExtra("proName").toString())
         edtProPrice.setText(intent.getStringExtra("proPrice").toString())
         edtDescription.setText(intent.getStringExtra("proDescription").toString())
 
         mDialog.setTitle("Updating $proName Record")
 
+        //An AlertDialog object is created
         val alertDialog = mDialog.create()
         alertDialog.show()
 
 
 
+        // takes the updated values
         btnUpdate.setOnClickListener{
             updateProData(
                 productId,
@@ -109,10 +120,12 @@ class SellerUpdateProduct : AppCompatActivity() {
             )
             Toast.makeText(applicationContext, "Product Data Updated", Toast.LENGTH_SHORT).show()
 
+            //updated with the new values using the setText() function.
             tvUpdateProName.text = edtProName.text.toString()
             tvUpdateProPrice.text = edtProPrice.text.toString()
             tvUpdateProDescription.text = edtDescription.text.toString()
 
+            //dialog is dismissed
             alertDialog.dismiss()
 
             val intent = Intent(this, SellerViewProduct::class.java)
@@ -123,19 +136,22 @@ class SellerUpdateProduct : AppCompatActivity() {
 
     }
 
+    //update the product information in the Firebase Realtime Database.
     private fun updateProData(
         productId: String,
         proName: String,
         proPrice: String,
         proDescription: String
     ){
+        // gets the reference to the Product node in the database
         val dbref = FirebaseDatabase.getInstance().getReference("Product").child(productId)
+        //new Product object with the updated values
         val proInfo = Product(proName,proPrice,proDescription,productId, sessionManager.getEmail())
         dbref.setValue(proInfo)
     }
 
 
-
+// set the values of the different view elements
     private fun setValuesToViews() {
 
         tvUpdateProName = findViewById(R.id.tvUpdateProName)

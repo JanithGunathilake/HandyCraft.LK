@@ -13,11 +13,11 @@ class MyAdaptorM(private val productList : ArrayList<Product>) : RecyclerView.Ad
     private lateinit var mListner : onItemClickListner
 
             interface onItemClickListner{
-                fun onItemClick(position: Int)
+                fun onItemClick(position: Int)//provide a callback to notify that an item in the list has been clicked
             }
 
     fun setOnItemClickListner(clickListner: onItemClickListner){
-        mListner = clickListner
+        mListner = clickListner// allows the adapter to call the onItemClick function of the interface when an item is clicked
     }
 
 
@@ -25,12 +25,14 @@ class MyAdaptorM(private val productList : ArrayList<Product>) : RecyclerView.Ad
 
 
 
+   //called by recycle view when it needs a new viewholder to display an item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.product_view_item,parent,false)
         return MyViewHolder(itemView,mListner)
     }
 
+    //called by recycle view to bind data to viewHolder and sets value to the textviews
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentitem = productList[position]
 
@@ -38,19 +40,20 @@ class MyAdaptorM(private val productList : ArrayList<Product>) : RecyclerView.Ad
         holder.proPrice.text = currentitem.proPrice
     }
 
+    //total number of items in the list
     override fun getItemCount(): Int {
         return productList.size
     }
 
     class MyViewHolder(itemView : View, clickListner: onItemClickListner) : RecyclerView.ViewHolder(itemView){
 
-        val proName : TextView = itemView.findViewById(R.id.tvNameProduct)
+        val proName : TextView = itemView.findViewById(R.id.tvNameProduct)//initialized in the constructor
         val proPrice : TextView = itemView.findViewById(R.id.tvProPrice)
 
-
+        //executed when an instance of the class is created
         init {
             itemView.setOnClickListener{
-                clickListner.onItemClick(adapterPosition)
+                clickListner.onItemClick(adapterPosition)//returns the position of the ViewHolder in the adapter.
             }
         }
 

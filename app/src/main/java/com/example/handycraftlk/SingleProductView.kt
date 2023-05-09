@@ -25,18 +25,22 @@ class SingleProductView : AppCompatActivity() {
         binding = ActivitySingleProductViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Hides the action bar of the activity.
         getSupportActionBar()?.hide()
 
 
         //session
+        //Initializes the sessionManager property
         sessionManager = SessionManager(this)
 
+        // Checks if the user is logged in
         if (!sessionManager.isLoggedIn()) {
             val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
             finish()
         }
 
+        //Initializes the property using the findViewById method.
         tvProName = findViewById(R.id.tvProName)
         tvProPrice = findViewById(R.id.tvProPrice)
         tvProDescription = findViewById(R.id.tvProDescription)
