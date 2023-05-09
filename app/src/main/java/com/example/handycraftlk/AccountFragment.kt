@@ -20,9 +20,9 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.google.firebase.database.*
 
-
+//define AccoutnFragment class
 class AccountFragment : Fragment() {
-
+//initialize variables
     private lateinit var binding: FragmentAccountBinding
     private lateinit var database: DatabaseReference
     private lateinit var sessionManager: SessionManager
@@ -31,7 +31,7 @@ class AccountFragment : Fragment() {
     private lateinit var AboutUs : Button
 
 
-
+    //Override the onCreateView method
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -45,6 +45,7 @@ class AccountFragment : Fragment() {
         sessionManager = SessionManager(requireContext())
         val userEmail = sessionManager.getEmail()
 
+        //retrieve the user's account information and display
         database = FirebaseDatabase.getInstance().reference
 
         val userRef = database.child("Users")
@@ -103,6 +104,7 @@ class AccountFragment : Fragment() {
 
 
         sessionManager = SessionManager(requireContext())
+        //Check if the user is logged in
         if (!sessionManager.isLoggedIn()) {
             val intent = Intent(activity, LoginPage::class.java)
             startActivity(intent)

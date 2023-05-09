@@ -13,6 +13,7 @@ import com.google.firebase.database.*
 
 class AccountInformationUpdate : AppCompatActivity(){
 
+    //declare private properties
     private lateinit var binding: ActivityAccountInformationUpdateBinding
     private lateinit var database: DatabaseReference
 
@@ -22,6 +23,7 @@ class AccountInformationUpdate : AppCompatActivity(){
         binding = ActivityAccountInformationUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //check if the user is logged in
         val sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -29,9 +31,12 @@ class AccountInformationUpdate : AppCompatActivity(){
             startActivity(intent)
             finish()
         }
-
+        //Get the user's email from the session
         val userEmail = sessionManager.getEmail()
+        //Initialize the database reference
         database = FirebaseDatabase.getInstance().reference
+
+        //Query the database for the user's details
 
         val userRef = database.child("Users")
         val query = userRef.orderByChild("email").equalTo(userEmail)

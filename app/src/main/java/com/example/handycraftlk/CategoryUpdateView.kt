@@ -13,6 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class CategoryUpdateView : AppCompatActivity() {
 
+    //Variable declaration
     private lateinit var tvCatName : TextView
     private lateinit var btnCatUp : Button
     private lateinit var btnCatDel : Button
@@ -20,8 +21,9 @@ class CategoryUpdateView : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //set layout
         setContentView(R.layout.activity_category_update_view)
-
+        //initialize "textview" and "Button" properties
         tvCatName = findViewById(R.id.tvCatName) // Initialize the TextView
         btnCatUp = findViewById(R.id.btnCatUp) // Initialize the Button
         btnCatDel = findViewById(R.id.btnCatDel)
@@ -48,6 +50,7 @@ class CategoryUpdateView : AppCompatActivity() {
 
     }
 
+    //delete category
     private fun deleteRecord(
         categoryId: String
     ){
@@ -64,6 +67,7 @@ class CategoryUpdateView : AppCompatActivity() {
         }
     }
 
+    //sets the value of the TextView to the categoryName
     private fun setValuesToView() {
         intent.getStringExtra("categoryId")
         tvCatName.text = intent.getStringExtra("categoryName")

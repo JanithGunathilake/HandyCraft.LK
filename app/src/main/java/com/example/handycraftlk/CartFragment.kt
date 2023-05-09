@@ -17,6 +17,7 @@ import com.google.firebase.database.*
 
 class CartFragment : Fragment() {
 
+    //declare variables
     private lateinit var sessionManager: SessionManager
     private lateinit var dbref : DatabaseReference
     private lateinit var cartRecyclerView: RecyclerView
@@ -58,6 +59,7 @@ class CartFragment : Fragment() {
     }
 
 
+    //retrieve the cart data for the logged-in user from the Firebase database
     private fun getCartData() {
         val userEmail = sessionManager.getEmail()
         dbref = FirebaseDatabase.getInstance().getReference("Cart")
