@@ -32,6 +32,7 @@ class SellerViewProduct : AppCompatActivity() {
 
 
         //session
+        //check if the user is logged in
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -41,15 +42,18 @@ class SellerViewProduct : AppCompatActivity() {
         }
 
 
+        //productRecyclerView is initialized and set to use a LinearLayoutManager with fixed size
         productRecyclerView = findViewById(R.id.rvProductView)
         productRecyclerView.layoutManager = LinearLayoutManager(this)
         productRecyclerView.setHasFixedSize(true)
 
+        //initializing
         productArrayList = arrayListOf<Product>()
         getProductData()
 
 
 
+        //handle clicks on their respective buttons.
         val btnAddProduct = findViewById<Button>(R.id.btnAddProductView)
         btnAddProduct.setOnClickListener { view ->
             btnAddProduct(view)
@@ -62,6 +66,7 @@ class SellerViewProduct : AppCompatActivity() {
 
     }
 
+    // method navigates the user to the seller dashboard:
     private fun btnAddProduct(view: View) {
         val intent = Intent(this, SellerAddProduct::class.java)
         startActivity(intent)
@@ -74,25 +79,34 @@ class SellerViewProduct : AppCompatActivity() {
         finish()
     }
 
+    //retrieve the product data from Firebase Realtime Database.
     private fun getProductData(){
+        //gets the reference to the "Product" node in the Firebase Realtime Database.
         dbref = FirebaseDatabase.getInstance().getReference("Product")
+        //retrieves the email address of the logged-in user
         val sellerEmail = sessionManager.getSession().get(SessionManager.KEY_EMAIL)
 
+        //sorts the products by the sellerEmail field and retrieves only the products that belong to the logged-in seller.
+       //database reference to retrieve the data
         dbref.orderByChild("sellerEmail").equalTo(sellerEmail).addValueEventListener(object : ValueEventListener {
+            //listens for changes in the data and retrieves the data snapshot from the database
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 if(snapshot.exists()){
+                    //loops through each child node of the snapshot and retrieves its value.
                     for (productSnapshot in snapshot.children){
                         val product = productSnapshot.getValue(Product::class.java)
                         productArrayList.add(product!!)
                     }
                     val myAdaptorM = MyAdaptorM(productArrayList)
+                    // sets the MyAdaptorM instance as the RecyclerView adapter.
                     productRecyclerView.adapter = myAdaptorM
                     myAdaptorM.setOnItemClickListner(object : MyAdaptorM.onItemClickListner{
                         override fun onItemClick(position: Int) {
                             val intent = Intent(this@SellerViewProduct,SellerUpdateProduct::class.java)
 
                             //extra data
+                            //passes the data of the clicked item as extras to the SellerUpdateProduct activity.
                             intent.putExtra("proName", productArrayList[position].proName)
                             intent.putExtra("proPrice", productArrayList[position].proPrice)
                             intent.putExtra("proDescription", productArrayList[position].proDescription)
