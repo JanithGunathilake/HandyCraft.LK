@@ -34,6 +34,7 @@ class HomeFragment : Fragment() {
         productRecycleView.layoutManager = LinearLayoutManager(requireContext())
         productRecycleView.setHasFixedSize(true)
 
+        //initialing an empty array
         productArrayList = arrayListOf<Product>()
         getProductData()
         return view
@@ -50,6 +51,7 @@ class HomeFragment : Fragment() {
         dbref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
 
+                //checks if the snapshot exists
                 if(snapshot.exists()){
                     for (productSnapshot in snapshot.children){
 

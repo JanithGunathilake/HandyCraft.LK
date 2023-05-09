@@ -20,16 +20,19 @@ class Home : AppCompatActivity() {
 
         sessionManager = SessionManager(this)
 
+        //checks if the user is logged in
         if (!sessionManager.isLoggedIn()) {
             val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
             finish()
         }
 
+        //Four image views are declared for the four icons in the bottom navigation bar
         val imgHome: ImageView = findViewById(R.id.icnHome)
         val imgOrder: ImageView = findViewById(R.id.icnOrder)
         val imgCart: ImageView = findViewById(R.id.icnCart)
         val imgUser:ImageView = findViewById(R.id.icnUser)
+        //Four fragments are declared for the four icons in the bottom navigation bar
         val fragmentHome = HomeFragment()
         val fragmentOrder = OrderFragment()
         val fragmentCart = CartFragment()
