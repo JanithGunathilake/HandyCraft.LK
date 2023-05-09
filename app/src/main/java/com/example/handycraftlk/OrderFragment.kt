@@ -1,5 +1,6 @@
 package com.example.handycraftlk
 
+import SessionManager
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +12,11 @@ import com.example.handycraftlk.R
 
 class OrderFragment : Fragment() {
 
+
+
     private lateinit var btnClickHere : Button//launches a new activity
+    private lateinit var sessionManager: SessionManager
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

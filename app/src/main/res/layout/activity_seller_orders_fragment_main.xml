@@ -72,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
 
-                android:background="#E4B51F"
+                android:background="#FAFAFA"
                 android:paddingTop="18dp"
                 android:text="Pending"
                 android:textAlignment="center"

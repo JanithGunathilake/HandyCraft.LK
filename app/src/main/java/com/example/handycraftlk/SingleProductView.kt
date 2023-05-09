@@ -4,7 +4,9 @@ import SessionManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.handycraftlk.databinding.ActivitySingleProductViewBinding
@@ -72,10 +74,18 @@ class SingleProductView : AppCompatActivity() {
 
             finish()
         }
+        val btnSellerBackImage = findViewById<ImageView>(R.id.imageView2)
+        btnSellerBackImage.setOnClickListener { view ->
+            btnBack(view)
+        }
     }
 
 
-
+    private fun btnBack(view: View) {
+        val intent = Intent(this, Home::class.java)
+        startActivity(intent)
+        finish()
+    }
     private fun setValuesToViews(){
         tvProName.text = intent.getStringExtra("proName")
         tvProPrice.text = intent.getStringExtra("proPrice")
