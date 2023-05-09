@@ -15,6 +15,7 @@ class LoginPage : AppCompatActivity() {
 
     private lateinit var sessionManager: SessionManager
 
+    //Declare variable
     private lateinit var binding: ActivityLoginPageBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
@@ -30,6 +31,7 @@ class LoginPage : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
+        //Create a click listener for the login button binding.btnLogin
         binding.btnLogin.setOnClickListener {
 
 
