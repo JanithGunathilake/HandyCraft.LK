@@ -16,6 +16,7 @@ import com.google.firebase.database.*
 
 class AdminCategory : AppCompatActivity() {
 
+    //declare variables
     private lateinit var binding: ActivityAdminCategoryBinding
     private lateinit var dbref : DatabaseReference
     private lateinit var categoryRecyclerView : RecyclerView
@@ -26,11 +27,14 @@ class AdminCategory : AppCompatActivity() {
         binding = ActivityAdminCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //find recycle view buttons by id
         categoryRecyclerView = findViewById(R.id.rvCategory)
         categoryRecyclerView.layoutManager = LinearLayoutManager(this)
         categoryRecyclerView.setHasFixedSize(true)
 
+        //initialize an arraylist
         categoryArrayList = arrayListOf<Category>()
+        //retrieve data from database
         getCategoryData()
 
 
@@ -50,11 +54,15 @@ class AdminCategory : AppCompatActivity() {
 
     private fun getCategoryData(){
 
+        //Firebase Realtime Database referenced at initialization.
         dbref = FirebaseDatabase.getInstance().getReference("Category")
 
+        //retrieve data from the database.
         dbref.addValueEventListener(object : ValueEventListener {
+            //change in the data
             override fun onDataChange(snapshot: DataSnapshot) {
 
+                //retrieve each category and add it to the list
                 if(snapshot.exists()){
                     for (categorySnapshot in snapshot.children){
 
@@ -63,6 +71,7 @@ class AdminCategory : AppCompatActivity() {
                         categoryArrayList.add(category!!)
                     }
 
+                    //pass arraylist
                     val myAdaptorD = MyAdaptorD(categoryArrayList)
                     categoryRecyclerView.adapter = myAdaptorD
                     myAdaptorD.setOnItemClickListner(object : MyAdaptorD.onItemClickListner{
@@ -96,13 +105,14 @@ class AdminCategory : AppCompatActivity() {
     }
 
 
-
+    //create an intent to start AddCategory
     private fun btnAddCategory(view: View) {
         val intent = Intent(this, AddCategory::class.java)
         startActivity(intent)
         finish()
     }
 
+    //create an intent to start AdminTool
     private fun btnBack(view: View) {
         val intent = Intent(this, AdminTool::class.java)
         startActivity(intent)
