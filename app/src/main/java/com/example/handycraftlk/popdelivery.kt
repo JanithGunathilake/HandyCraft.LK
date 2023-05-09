@@ -25,7 +25,7 @@ class popdelivery : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_popdelivery)
         initView()
-        setValuesToViews()
+        setValuesToViews()// sets the text values of the TextViews with the order details received through the intent extras.
 
         inupdate=findViewById(R.id.inupdateBtn)
 
@@ -41,6 +41,7 @@ class popdelivery : AppCompatActivity() {
     }
 
 
+    //updates the status of the order in the Firebase Realtime Database.
     private fun updateStatus(id:String){
         val dbref= FirebaseDatabase.getInstance().getReference("Order").child(id)
 
