@@ -25,6 +25,8 @@ class SingleProductView : AppCompatActivity() {
 
         getSupportActionBar()?.hide()
 
+
+        //session
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -39,7 +41,7 @@ class SingleProductView : AppCompatActivity() {
         btnAddToCart = findViewById(R.id.btnAddToCart)
 
         setValuesToViews()
-
+        //product adding to cart
         btnAddToCart.setOnClickListener {
             val productRef = FirebaseDatabase.getInstance().getReference("Product").push()
             val cartRef = FirebaseDatabase.getInstance().getReference("Cart").child(sessionManager.getSession().get("id")

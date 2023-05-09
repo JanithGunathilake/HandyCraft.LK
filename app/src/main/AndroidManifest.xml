@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HandyCraftLK"
         tools:targetApi="31">
+
         <activity
             android:name=".CustomerCheckout"
             android:exported="false">
@@ -194,13 +195,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
 
 
         <activity
