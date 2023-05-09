@@ -38,6 +38,7 @@ class CustomerCheckout : AppCompatActivity() {
         setContentView(binding.root)
         //get data
 
+
         itemRecyclerView=findViewById(R.id.checkoutitems)
         itemRecyclerView.layoutManager=LinearLayoutManager(this)
         itemRecyclerView.setHasFixedSize(true)
@@ -141,7 +142,7 @@ class CustomerCheckout : AppCompatActivity() {
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        var totalPrice = 0.0
+                        var totalPrice = 250.0
                         for (cartSnapshot in snapshot.children) {
                             val cart = cartSnapshot.getValue(Cart::class.java)
                             cartArrayList.add(cart!!)
@@ -151,7 +152,7 @@ class CustomerCheckout : AppCompatActivity() {
 
 
                         val totalPriceTextView =findViewById<TextView>(R.id.chFinalTotal)
-                        totalPriceTextView?.text = "Total Price: $totalPrice"
+                        totalPriceTextView?.text = "$totalPrice"
 
                     }
                 }

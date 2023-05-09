@@ -40,10 +40,9 @@ class Home : AppCompatActivity() {
             imgOrder.setImageResource(R.drawable.selected_order)
             imgCart.setImageResource(R.drawable.unselected_cart)
             imgUser.setImageResource(R.drawable.unselected_user)
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView, fragmentOrder)
-                commit()
-            }
+            val intent = Intent(this, COrdersFragmentMain::class.java)
+            startActivity(intent)
+            finish()
         }
 
 
