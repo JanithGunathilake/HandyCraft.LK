@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.handycraftlk.databinding.ActivityAccInfomationBinding
-import com.example.handycraftlk.databinding.ActivityMainBinding
-import com.google.firebase.database.DatabaseReference
+
 
 class MainActivity : AppCompatActivity() {
 
