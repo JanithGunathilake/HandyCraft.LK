@@ -2,11 +2,9 @@ package com.example.handycraftlk
 
 import SessionManager
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.handycraftlk.R
 
 class Home : AppCompatActivity() {
 
