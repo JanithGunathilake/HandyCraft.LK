@@ -23,12 +23,14 @@ class SellerProfile : AppCompatActivity() {
     private lateinit var sessionManager : SessionManager
     private lateinit var database : DatabaseReference
 
+    //inflates the layout XML file and returns a binding object.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySellerProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
+        //session manager is initialized and it checks if the user is already logged in
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -46,12 +48,16 @@ class SellerProfile : AppCompatActivity() {
         }
 
 
+        //retrieve user's email from session manager
         val userEmail = sessionManager.getEmail()
         database = FirebaseDatabase.getInstance().reference
 
+        //get a reference to the Firebase Realtime Database.
         val userRef = database.child("Users")
+        //initialized with a query to search for the user with the given email.
         val query = userRef.orderByChild("email").equalTo(userEmail)
 
+        //user's details are retrieved and displayed in the UI.
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -84,6 +90,7 @@ class SellerProfile : AppCompatActivity() {
 
 
 
+        //button launches a different activity when clicked
 
 
         val btnAddProductImage = findViewById<ImageView>(R.id.btnAAdd)
@@ -114,6 +121,7 @@ class SellerProfile : AppCompatActivity() {
 
 
     }
+    //method launches a different activity using an Intent
     private fun btnBack(view: View) {
         val intent = Intent(this, SellerDashboard::class.java)
         startActivity(intent)
