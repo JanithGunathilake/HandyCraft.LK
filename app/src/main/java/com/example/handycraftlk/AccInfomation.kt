@@ -17,6 +17,7 @@ class AccInfomation : AppCompatActivity() {//comment
     private lateinit var database: DatabaseReference
     private lateinit var sessionManager: SessionManager
 
+    //override 'onCreate function'
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -27,7 +28,7 @@ class AccInfomation : AppCompatActivity() {//comment
         setContentView(binding.root)
 
 
-
+        //check if the user is logged in
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
@@ -37,7 +38,7 @@ class AccInfomation : AppCompatActivity() {//comment
         }
 
 
-
+        //Retrieve user information from the database
         val userEmail = sessionManager.getEmail()
         database = FirebaseDatabase.getInstance().reference
 
