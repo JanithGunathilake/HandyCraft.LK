@@ -6,7 +6,6 @@ import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handycraftlk.databinding.ActivityAccInfomationBinding
 import com.google.firebase.database.*
