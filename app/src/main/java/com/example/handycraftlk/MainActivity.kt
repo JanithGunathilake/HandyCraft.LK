@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
        getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
+        //sets the user interface layout
         setContentView(R.layout.activity_main)
 
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, AboutUsPage::class.java)
         startActivity(intent)
-        finish()
+        finish()//destroy the current activity
     }
 
 

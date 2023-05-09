@@ -30,9 +30,11 @@ class MainActivity_register : AppCompatActivity() {
         binding = ActivityMainRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // initializes a Spinner object and the FirebaseAuth object
         val spinner = findViewById<Spinner>(R.id.spinner)
         auth = Firebase.auth
 
+        //onClickListener for the register button
         binding.btnCreateAcc.setOnClickListener {
 
             val name = binding.edtName.text.toString()
@@ -94,6 +96,7 @@ class MainActivity_register : AppCompatActivity() {
         }
     }
 
+    //validation functions that check if the input email, name, and password respectively are valid
     private fun isValidEmail(email: String): Boolean {
         return email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
@@ -106,6 +109,7 @@ class MainActivity_register : AppCompatActivity() {
         val pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\$@!%*?&])[A-Za-z\\d\$@!%*?&]{8,}$".toRegex()
         return password.isNotEmpty() && password.matches(pattern)
     }
+    //event handlers for button clicks
     fun buttonLogin(v: View){
 
         val intent = Intent(this, LoginPage::class.java)
