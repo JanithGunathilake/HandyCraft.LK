@@ -97,10 +97,7 @@ class AdminProfile : AppCompatActivity() {
         btnToolImage.setOnClickListener{ view ->
             btnTool(view)
         }
-        val btnPL = findViewById<ImageView>(R.id.ivProList)
-        btnPL.setOnClickListener{ view ->
-            btnProductList(view)
-        }
+
 
 
 

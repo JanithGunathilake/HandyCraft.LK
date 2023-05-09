@@ -20,10 +20,7 @@ class AdminDashboard : AppCompatActivity() {
         btnProfile.setOnClickListener { view ->
             btnProfile(view)
         }
-        val btnPL = findViewById<ImageView>(R.id.ivProductView)
-        btnPL.setOnClickListener { view ->
-            btnProductList(view)
-        }
+
 
     }
 

@@ -51,7 +51,6 @@ class CartFragment : Fragment() {
             startActivity(intent)
             activity?.finish()
         }
-
         getCartData()
 
         return view
@@ -66,7 +65,7 @@ class CartFragment : Fragment() {
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        var totalPrice = 0.0
+                        var totalPrice = 250.0
                         for (cartSnapshot in snapshot.children) {
                             val cart = cartSnapshot.getValue(Cart::class.java)
                             cartArrayList.add(cart!!)

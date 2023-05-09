@@ -31,13 +31,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgViewItem1"
-                    android:layout_width="147dp"
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/Dream_Catcher"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/__48" />
-
+                    app:srcCompat="@drawable/_b4c845172c02f5e0ca1addee2809247" />
             </LinearLayout>
 
         </LinearLayout>

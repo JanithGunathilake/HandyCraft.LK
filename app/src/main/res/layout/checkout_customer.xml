@@ -86,8 +86,8 @@
                         android:layout_weight="1"
                         android:background="#66FFFFFF"
                         android:padding="10dp"
-                        android:text="@string/addresscus"
-                        android:textSize="16sp">
+                       android:hint="enter address"
+                         android:textSize="16sp">
 
                     </EditText>
 
@@ -140,7 +140,7 @@
                             android:layout_weight="1"
                             android:background="#FFFFFF"
                             android:padding="10dp"
-                            android:text="@string/visa"></EditText>
+                            android:text="4256****256"></EditText>
 
                     </LinearLayout>
 
@@ -155,7 +155,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:padding="10dp"
-                            android:text="@string/cvv">
+                            android:hint="cvv">
 
                         </EditText>
 
