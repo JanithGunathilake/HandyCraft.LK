@@ -31,7 +31,7 @@ class SellerViewProduct : AppCompatActivity() {
 
 
 
-
+        //session
         sessionManager = SessionManager(this)
 
         if (!sessionManager.isLoggedIn()) {
