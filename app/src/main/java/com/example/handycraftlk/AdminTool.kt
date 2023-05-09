@@ -13,9 +13,11 @@ import android.widget.TextView
 class AdminTool : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //set the ui
         setContentView(R.layout.activity_admin_tool)
-
+        //find the views by id
         val btnCategory = findViewById<TextView>(R.id.MCat)
+        //when the view is clicked, calling the private methods
         btnCategory.setOnClickListener { view ->
             btnCategory(view)
         }

@@ -12,10 +12,12 @@ class AdminProductList : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //set the layout
         setContentView(R.layout.activity_admin_product_list)
 
-
+        //image views are defined
         val btnHomeImage = findViewById<ImageView>(R.id.ivHomePL)
+        //when user click on any of images corresponding array will be executed
         btnHomeImage.setOnClickListener{ view ->
             btnHome(view)
         }

@@ -17,6 +17,7 @@ class AddCategory : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddCategoryBinding.inflate(layoutInflater)
+        //set the content view
         setContentView(binding.root)
 
         binding.btnAddCategory.setOnClickListener{
@@ -24,12 +25,14 @@ class AddCategory : AppCompatActivity() {
 
             database = FirebaseDatabase.getInstance().getReference("Category")
             val categoryID = database.push().key // Generate a unique key using push() method
+            ///if the id is not null create category object
             if (categoryID != null) {
                 val category = Category(categoryID,categoryName )
+                //set the value of the category object in the database
                 database.child(categoryID).setValue(category).addOnCompleteListener{
 
                     binding.edtCategoryName.text.clear()
-
+                    //toast message
                     Toast.makeText(this,"Successfully Added", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this, AdminCategory::class.java)

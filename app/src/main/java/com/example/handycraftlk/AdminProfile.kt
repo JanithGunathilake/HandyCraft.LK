@@ -25,17 +25,20 @@ class AdminProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminProfileBinding.inflate(layoutInflater)
+        //set the layout file
         setContentView(binding.root)
 
-
+        //manage user session data
         sessionManager = SessionManager(this)
-
+        //checks if the user is logged by calling isLoggedIn
         if (!sessionManager.isLoggedIn()) {
+            //is not logged in redirect to the login page
             val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
             finish()
         }
 
+        //  button for logged out
         myButton = findViewById(R.id.btnAdminLogout)
         myButton.setOnClickListener { view ->
             sessionManager.logout()
@@ -45,11 +48,15 @@ class AdminProfile : AppCompatActivity() {
         }
 
         val userEmail = sessionManager.getEmail()
+        //connect to the firebase
         database = FirebaseDatabase.getInstance().reference
 
+        //reference user data in the database
         val userRef = database.child("Users")
+        //filter data based of email
         val query = userRef.orderByChild("email").equalTo(userEmail)
 
+        //retrieve user data and store
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
