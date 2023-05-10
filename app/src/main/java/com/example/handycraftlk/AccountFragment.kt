@@ -28,6 +28,7 @@ class AccountFragment : Fragment() {
     private lateinit var sessionManager: SessionManager
     private lateinit var myButton: Button
     private lateinit var AccInfo: Button
+    private lateinit var AboutUs : Button
 
 
 
@@ -79,6 +80,15 @@ class AccountFragment : Fragment() {
 
         }
 
+        AboutUs = binding.root.findViewById(R.id.btnAboutUs)
+        AboutUs.setOnClickListener {
+
+            val intent = Intent(activity, AboutUsPage2::class.java)
+            startActivity(intent)
+            activity?.finish()
+
+        }
+
 
         myButton = binding.root.findViewById(R.id.btnLogout)
         myButton.setOnClickListener {
@@ -86,7 +96,7 @@ class AccountFragment : Fragment() {
             val intent = Intent(activity, LoginPage::class.java)
             startActivity(intent)
             activity?.finish()
-            Toast.makeText(activity, "Button clicked!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Log Out Successful!", Toast.LENGTH_SHORT).show()
 
         }
 

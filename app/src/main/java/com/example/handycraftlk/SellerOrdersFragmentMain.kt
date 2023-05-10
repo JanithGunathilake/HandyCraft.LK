@@ -1,33 +1,73 @@
 package com.example.handycraftlk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.example.handycraftlk.databinding.ActivitySellerOrdersFragmentMainBinding
-import com.example.handycraftlk.databinding.CheckoutCustomerBinding
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+
+
 
 class SellerOrdersFragmentMain : AppCompatActivity() {
+    private lateinit var spending: TextView
+    private lateinit var processing: TextView
+    private lateinit var inDelivery: TextView
+    private lateinit var complete: TextView
 
-    lateinit var binding: ActivitySellerOrdersFragmentMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivitySellerOrdersFragmentMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.sPending.setOnClickListener{
-        replaceFragment(Spending())
+        setContentView(R.layout.activity_seller_orders_fragment_main)
+        spending=findViewById(R.id.sPending)
+        processing=findViewById(R.id.sprocess)
+        inDelivery=findViewById(R.id.sInDelivery)
+       complete=findViewById(R.id.sComplete)
 
+
+        //val fragmentCart = CartFragment()
+        val sellerPendingOrderHistory= SellerPendingOrderHistory()
+        val sellerProcessingOrderHistory=SellerProcessingOrderHistory()
+        val sellerInDeliveryOrderHistroy=SellerInDeliveryOrderHistory()
+        val sellerCompleteOrderHistory= SellerCompleteOrderHistory()
+//        val customerCompleteHistory=CustomerCompleteHistory()
+
+
+        complete.setOnClickListener {
+
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragview,sellerCompleteOrderHistory)
+                commit()            }
         }
-        binding.sApproved.setOnClickListener{
-            replaceFragment(SApproved())
 
+        spending.setOnClickListener {
+
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragview,sellerPendingOrderHistory)
+                commit()            }
+        }
+
+
+        processing.setOnClickListener {
+
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragview,sellerProcessingOrderHistory)
+                commit()            }
+        }
+
+        inDelivery.setOnClickListener {
+
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragview,sellerInDeliveryOrderHistroy)
+                commit()            }
+        }
+        val btnSellerBackImage = findViewById<ImageView>(R.id.imageView2)
+        btnSellerBackImage.setOnClickListener { view ->
+            btnBack(view)
         }
     }
-
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager =supportFragmentManager
-        val fragmentTransaction=fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer,fragment)
-        fragmentTransaction.commit()
-
+    private fun btnBack(view: View) {
+        val intent = Intent(this, SellerDashboard::class.java)
+        startActivity(intent)
+        finish()
     }
 }

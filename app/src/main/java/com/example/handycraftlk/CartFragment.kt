@@ -7,17 +7,43 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.handycraftlk.R
+import android.widget.Button
+import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.handycraftlk.adaptors.CartAdaptor
+import com.example.handycraftlk.models.Cart
+import com.google.firebase.database.*
 
 class CartFragment : Fragment() {
 
     private lateinit var sessionManager: SessionManager
-
+    private lateinit var dbref : DatabaseReference
+    private lateinit var cartRecyclerView: RecyclerView
+    private lateinit var cartArrayList : ArrayList<Cart>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val view = inflater.inflate(R.layout.fragment_cart, container, false)
+
+        val checkoutButton = view.findViewById<Button>(R.id.checkoutButton)
+        if (checkoutButton != null) {
+            checkoutButton.setOnClickListener {
+                // Add an Intent to start the CustomerCheckout activity
+                val intent = Intent(activity, CustomerCheckout::class.java)
+                startActivity(intent)
+                //removeCartDataForUser()
+            }
+        }
+
+        cartRecyclerView = view.findViewById(R.id.rvCartItem)
+        cartRecyclerView.setHasFixedSize(true)
+        cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        cartArrayList = arrayListOf<Cart>()
 
         sessionManager = SessionManager(requireContext())
         if (!sessionManager.isLoggedIn()) {
@@ -25,10 +51,41 @@ class CartFragment : Fragment() {
             startActivity(intent)
             activity?.finish()
         }
+        getCartData()
 
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        return view
     }
+
+
+    private fun getCartData() {
+        val userEmail = sessionManager.getEmail()
+        dbref = FirebaseDatabase.getInstance().getReference("Cart")
+
+        dbref.orderByChild("buyerEmail").equalTo(userEmail)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        var totalPrice = 250.0
+                        for (cartSnapshot in snapshot.children) {
+                            val cart = cartSnapshot.getValue(Cart::class.java)
+                            cartArrayList.add(cart!!)
+                            totalPrice += cart.proPrice?.toDoubleOrNull() ?: 0.0
+                        }
+                        cartRecyclerView.adapter = CartAdaptor(cartArrayList)
+                        // Show the total price on the screen
+                        val totalPriceTextView = view?.findViewById<TextView>(R.id.totalPriceTextView)
+                        totalPriceTextView?.text = "Total Price: $totalPrice"
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error here
+                }
+            })
+    }
+
+
+
+
+
 
 }

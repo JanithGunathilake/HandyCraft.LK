@@ -30,9 +30,11 @@ class MainActivity_register : AppCompatActivity() {
         binding = ActivityMainRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // initializes a Spinner object and the FirebaseAuth object
         val spinner = findViewById<Spinner>(R.id.spinner)
         auth = Firebase.auth
 
+        //onClickListener for the register button
         binding.btnCreateAcc.setOnClickListener {
 
             val name = binding.edtName.text.toString()
@@ -41,12 +43,18 @@ class MainActivity_register : AppCompatActivity() {
             val password = binding.edtPwd.text.toString()
             val rePassword = binding.edtRePwd.text.toString()
 
-            if (!isValidName(name)) {
+            if (name.isEmpty()) {
+                binding.edtName.error = "Name is Empty"
+            }else if (!isValidName(name)) {
                 binding.edtName.error = "Invalid name"
-            } else if (!isValidEmail(email)) {
+            }else if (email.isEmpty()) {
+                binding.edtEmail.error = "Email is Empty"
+            }else if (!isValidEmail(email)) {
                 binding.edtEmail.error = "Invalid email"
             } else if (phoneNumber.isEmpty()) {
                 binding.edtPhone.error = "Phone Number is Empty"
+            }else if (password.isEmpty()) {
+                binding.edtPwd.error = "Password is Empty"
             } else if (!isValidPassword(password)) {
                 binding.edtPwd.error = "Password is Invalid"
             } else if (rePassword.isEmpty()) {
@@ -88,6 +96,7 @@ class MainActivity_register : AppCompatActivity() {
         }
     }
 
+    //validation functions that check if the input email, name, and password respectively are valid
     private fun isValidEmail(email: String): Boolean {
         return email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
@@ -100,7 +109,14 @@ class MainActivity_register : AppCompatActivity() {
         val pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\$@!%*?&])[A-Za-z\\d\$@!%*?&]{8,}$".toRegex()
         return password.isNotEmpty() && password.matches(pattern)
     }
+    //event handlers for button clicks
     fun buttonLogin(v: View){
+
+        val intent = Intent(this, LoginPage::class.java)
+        startActivity(intent)
+        finish()
+    }
+    fun buttonClick(v: View){
 
         val intent = Intent(this, LoginPage::class.java)
         startActivity(intent)
