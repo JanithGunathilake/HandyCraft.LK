@@ -96,7 +96,7 @@ class MainActivity_register : AppCompatActivity() {
         }
     }
 
-    //validation functions that check if the input email, name, and password respectively are valid
+    //validation functions
     private fun isValidEmail(email: String): Boolean {
         return email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
@@ -109,7 +109,7 @@ class MainActivity_register : AppCompatActivity() {
         val pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\$@!%*?&])[A-Za-z\\d\$@!%*?&]{8,}$".toRegex()
         return password.isNotEmpty() && password.matches(pattern)
     }
-    //event handlers for button clicks
+
     fun buttonLogin(v: View){
 
         val intent = Intent(this, LoginPage::class.java)
