@@ -34,4 +34,4 @@ processed through the system right away.
 
 ## Technologies Used
 
-Android Studio with kotlin and Firebase
+Android Studio with kotlin and Firebase...
